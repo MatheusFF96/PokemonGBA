@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6155020119b8644e893c3d866879d6c, type: 3}
+  m_Name: Paras
+  m_EditorClassIdentifier: 
+  name: Paras
+  description: 
+  frontSprite: {fileID: 21300000, guid: f12f9e9278ec6b5459e454ca87df65e2, type: 3}
+  backSprite: {fileID: 21300000, guid: e44f773f524e7c0499245f1a4eccc21d, type: 3}
+  type1: 12
+  type2: 5
+  maxHp: 35
+  attack: 70
+  defense: 55
+  spAttack: 45
+  spDefense: 55
+  speed: 25
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 7f82fffb4607e2d4488ad049d1e03d36, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 529ea5b6468a54c43b22bd5c023fbfbb, type: 2}
+    level: 6
+  - moveBase: {fileID: 11400000, guid: d03b2abfb1e6f0f4a8ff726d03b29306, type: 2}
+    level: 6
+  - moveBase: {fileID: 11400000, guid: b88a16fd3658b7740ad43872d8b5a724, type: 2}
+    level: 11

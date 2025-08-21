@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6155020119b8644e893c3d866879d6c, type: 3}
+  m_Name: Ratata
+  m_EditorClassIdentifier: 
+  name: Ratata
+  description: 
+  frontSprite: {fileID: 21300000, guid: ec50a5f500cea824e95990394c02c2d3, type: 3}
+  backSprite: {fileID: 21300000, guid: 97f64aacd5959bb4bbee1545d0bd2fdb, type: 3}
+  type1: 1
+  type2: 0
+  maxHp: 30
+  attack: 56
+  defense: 35
+  spAttack: 25
+  spDefense: 35
+  speed: 72
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 7bf70508323f2924cb177a3b69c96f8f, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: e5ca16ccfc077d2479b182d7a8185844, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: a18d267c0f525084a8f965a74263a0eb, type: 2}
+    level: 4
+  - moveBase: {fileID: 11400000, guid: 68e15a9243e233840a2ffa6c20e1f44c, type: 2}
+    level: 7
