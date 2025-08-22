@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6155020119b8644e893c3d866879d6c, type: 3}
+  m_Name: Tangela
+  m_EditorClassIdentifier: 
+  name: Tangela
+  description: 
+  frontSprite: {fileID: 21300000, guid: ccb9013cfc3e2e1488dda46a49f31a3a, type: 3}
+  backSprite: {fileID: 21300000, guid: 83b197a9d6698d24ba3fc4b33a21a3b5, type: 3}
+  type1: 5
+  type2: 0
+  maxHp: 65
+  attack: 55
+  defense: 115
+  spAttack: 100
+  spDefense: 40
+  speed: 60
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: b88a16fd3658b7740ad43872d8b5a724, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: d03b2abfb1e6f0f4a8ff726d03b29306, type: 2}
+    level: 4
+  - moveBase: {fileID: 11400000, guid: 3fc1edd5441b6d2438efd77210473449, type: 2}
+    level: 8
+  - moveBase: {fileID: 11400000, guid: 0fb2d094b818e9f49be48fb343455fa6, type: 2}
+    level: 12

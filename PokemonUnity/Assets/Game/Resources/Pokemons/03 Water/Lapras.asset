@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6155020119b8644e893c3d866879d6c, type: 3}
+  m_Name: Lapras
+  m_EditorClassIdentifier: 
+  name: Lapras
+  description: 
+  frontSprite: {fileID: 21300000, guid: c76ea05d88b25054c9a8d2bf9604e9d3, type: 3}
+  backSprite: {fileID: 21300000, guid: 5d136c287015d25468670fecaa4ade18, type: 3}
+  type1: 3
+  type2: 6
+  maxHp: 130
+  attack: 85
+  defense: 80
+  spAttack: 85
+  spDefense: 95
+  speed: 60
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 22a42e9eb5e6fb64394db764602aefc0, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: cfe02f6d45f13bd42aa99a7b5e57ab20, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 09b43e5dc3b3b874583aa60e8082b39c, type: 2}
+    level: 5
+  - moveBase: {fileID: 11400000, guid: 083b2c164e3478e4199d3bd99fb82e56, type: 2}
+    level: 10

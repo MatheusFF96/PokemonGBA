@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6155020119b8644e893c3d866879d6c, type: 3}
+  m_Name: Machop
+  m_EditorClassIdentifier: 
+  name: Machop
+  description: 
+  frontSprite: {fileID: 21300000, guid: e3297762afc37ac4c87388d04675b629, type: 3}
+  backSprite: {fileID: 21300000, guid: 5bb51314aaf3edf4e905a259714a0680, type: 3}
+  type1: 7
+  type2: 0
+  maxHp: 70
+  attack: 80
+  defense: 50
+  spAttack: 35
+  spDefense: 35
+  speed: 35
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 51196c67280641e4a9527340346922d9, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 68e15a9243e233840a2ffa6c20e1f44c, type: 2}
+    level: 4
+  - moveBase: {fileID: 11400000, guid: 502de9f887992af42bf042880f93d6b5, type: 2}
+    level: 8
+  - moveBase: {fileID: 11400000, guid: 816b27de9e0c91e44bcfb94d4b4cd447, type: 2}
+    level: 12

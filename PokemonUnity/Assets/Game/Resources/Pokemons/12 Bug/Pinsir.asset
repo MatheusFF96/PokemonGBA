@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6155020119b8644e893c3d866879d6c, type: 3}
+  m_Name: Pinsir
+  m_EditorClassIdentifier: 
+  name: Pinsir
+  description: 
+  frontSprite: {fileID: 21300000, guid: d9fd186ff722b9444b97f8b0fc174d67, type: 3}
+  backSprite: {fileID: 21300000, guid: d4093c1827c99e0438c19da60682f4bd, type: 3}
+  type1: 12
+  type2: 0
+  maxHp: 65
+  attack: 125
+  defense: 100
+  spAttack: 55
+  spDefense: 70
+  speed: 85
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 50ebe41b88d2f0e40850275411fc70a4, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 68e15a9243e233840a2ffa6c20e1f44c, type: 2}
+    level: 4
+  - moveBase: {fileID: 11400000, guid: 3e2fee7f03cc3dd4890b397d82fe452c, type: 2}
+    level: 8
+  - moveBase: {fileID: 11400000, guid: 9a9fdea5993c7c84e9f18bb067dbd1cd, type: 2}
+    level: 12

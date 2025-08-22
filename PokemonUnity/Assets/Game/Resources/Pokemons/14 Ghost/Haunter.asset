@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6155020119b8644e893c3d866879d6c, type: 3}
+  m_Name: Haunter
+  m_EditorClassIdentifier: 
+  name: Haunter
+  description: 
+  frontSprite: {fileID: 21300000, guid: c7d203c71472e664ab48d00a5ef48b6c, type: 3}
+  backSprite: {fileID: 21300000, guid: a593b1c29ee597f48b8b815e5d66dfc5, type: 3}
+  type1: 14
+  type2: 8
+  maxHp: 45
+  attack: 50
+  defense: 45
+  spAttack: 115
+  spDefense: 55
+  speed: 95
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: ec497446397417c429896c1f4b5b354a, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 2eb0b845c38592446a6507520d11a254, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 3aad8e7d1187bca47a0f62148a852748, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 457b9091b9934da47adc5da4bb488ff9, type: 2}
+    level: 12

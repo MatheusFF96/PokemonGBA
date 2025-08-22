@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6155020119b8644e893c3d866879d6c, type: 3}
+  m_Name: Shellder
+  m_EditorClassIdentifier: 
+  name: Shellder
+  description: 
+  frontSprite: {fileID: 21300000, guid: 7827679a1705c7945a68a6616b5fe14b, type: 3}
+  backSprite: {fileID: 21300000, guid: 03a39ca82f4f57e46b32cb331d536753, type: 3}
+  type1: 3
+  type2: 0
+  maxHp: 30
+  attack: 65
+  defense: 100
+  spAttack: 45
+  spDefense: 25
+  speed: 40
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: cfe02f6d45f13bd42aa99a7b5e57ab20, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 1f28ec05c859d8b4ea974baad4b9a8d6, type: 2}
+    level: 4
+  - moveBase: {fileID: 11400000, guid: 1237dfaee31edc3488ef3c4d579d6751, type: 2}
+    level: 8
+  - moveBase: {fileID: 11400000, guid: 8922f75dde3643743bde066fd236feca, type: 2}
+    level: 12

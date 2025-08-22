@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6155020119b8644e893c3d866879d6c, type: 3}
+  m_Name: Voltorb
+  m_EditorClassIdentifier: 
+  name: Voltorb
+  description: 
+  frontSprite: {fileID: 21300000, guid: cef1b1cbe8fdb054b97a941c0be1a3ba, type: 3}
+  backSprite: {fileID: 21300000, guid: 83d993d6616f94947b2212d2a1a02008, type: 3}
+  type1: 4
+  type2: 0
+  maxHp: 40
+  attack: 30
+  defense: 50
+  spAttack: 55
+  spDefense: 55
+  speed: 100
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 3de762667bb40aa4e993e83c96ec0b04, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 707d481cb787e4542973997f714dd5b8, type: 2}
+    level: 6
+  - moveBase: {fileID: 11400000, guid: 7d285df9fe4540d42aa3ec8d84ecf48b, type: 2}
+    level: 9
+  - moveBase: {fileID: 11400000, guid: 401628d1f14265a48954fc00772a37b8, type: 2}
+    level: 11

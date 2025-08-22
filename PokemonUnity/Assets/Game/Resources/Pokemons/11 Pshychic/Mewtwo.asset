@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6155020119b8644e893c3d866879d6c, type: 3}
+  m_Name: Mewtwo
+  m_EditorClassIdentifier: 
+  name: Mewtwo
+  description: 
+  frontSprite: {fileID: 21300000, guid: 889aa468ffc924c4da8663a1a7e6bcbd, type: 3}
+  backSprite: {fileID: 21300000, guid: b16d98f8720d9bc4faa3205518f995b7, type: 3}
+  type1: 11
+  type2: 0
+  maxHp: 106
+  attack: 110
+  defense: 90
+  spAttack: 154
+  spDefense: 90
+  speed: 130
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 7b931aad6695b3e4b931cb2fff964f1e, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: ef56181614b77a443a8ecdc659a6329e, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 27d53f08b611eee4b8c5729cf7f8df60, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 740766050e967bb4b897263fdc0ca3fe, type: 2}
+    level: 8
