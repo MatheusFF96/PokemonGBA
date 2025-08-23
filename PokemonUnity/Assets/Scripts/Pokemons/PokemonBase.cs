@@ -116,7 +116,7 @@ public enum PokemonType
     Normal,
     Fire,
     Water,
-    Eletric,
+    Electric,
     Grass,
     Ice,
     Fighting,

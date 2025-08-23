@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6155020119b8644e893c3d866879d6c, type: 3}
+  m_Name: Dewgong
+  m_EditorClassIdentifier: 
+  name: Dewgong
+  description: 
+  frontSprite: {fileID: 21300000, guid: a4d2bdf13aed23f4781c674ed24cdcfe, type: 3}
+  backSprite: {fileID: 21300000, guid: 2e34ccbd2f4e3be43a94412e7c635e78, type: 3}
+  type1: 3
+  type2: 6
+  maxHp: 90
+  attack: 70
+  defense: 80
+  spAttack: 70
+  spDefense: 95
+  speed: 70
+  learnableMoves:
+  - moveBase: {fileID: 0}
+    level: 0
+  - moveBase: {fileID: 0}
+    level: 0
+  - moveBase: {fileID: 0}
+    level: 0
+  - moveBase: {fileID: 0}
+    level: 0
