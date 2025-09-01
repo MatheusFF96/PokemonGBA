@@ -20,7 +20,6 @@ MonoBehaviour:
   pp: 40
   category: 0
   effects:
-    boosts:
-    - stat: 4
-      boost: 1
-  target: 1
+    boosts: []
+    status: 0
+  target: 0

@@ -21,4 +21,5 @@ MonoBehaviour:
   category: 1
   effects:
     boosts: []
+    status: 2
   target: 0
