@@ -10,11 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dfd40473c09833c4bae98e26eaa412a2, type: 3}
-  m_Name: Vise Grip
+  m_Name: Poison Sting
   m_EditorClassIdentifier: 
-  name: Vise Grip
+  name: Poison Sting
   description: 
-  type: 1
-  power: 55
+  type: 8
+  power: 15
   accuracy: 100
-  pp: 30
+  alwaysHits: 0
+  pp: 35
+  category: 0
+  effects:
+    boosts: []
+    status: 0
+    volatileStatus: 0
+  secondaries:
+  - boosts: []
+    status: 1
+    volatileStatus: 0
+    chance: 30
+    target: 0
+  target: 0
