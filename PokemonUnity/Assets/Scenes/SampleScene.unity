@@ -1347,6 +1347,8 @@ GameObject:
   - component: {fileID: 307138835}
   - component: {fileID: 307138834}
   - component: {fileID: 307138836}
+  - component: {fileID: 307138838}
+  - component: {fileID: 307138837}
   m_Layer: 10
   m_Name: NPC
   m_TagString: Untagged
@@ -1509,6 +1511,57 @@ MonoBehaviour:
     lines:
     - "Ol\xE1, voc\xEA tentou andar pela grama alta?"
     - "Voc\xEA pode encontrar pokemons legais por l\xE1!"
+  movementPattern:
+  - {x: 2, y: 0}
+  - {x: 0, y: -2}
+  - {x: -2, y: 0}
+  - {x: 0, y: 2}
+  timeBetweenPattern: 3
+--- !u!114 &307138837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307138831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c354b564bba7fe54cbdf79c63b1e7d1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkDownSprites:
+  - {fileID: -2114329738, guid: f11cab94eaa8dd94b93c16b6fb7e5cd0, type: 3}
+  - {fileID: -306552918, guid: f11cab94eaa8dd94b93c16b6fb7e5cd0, type: 3}
+  - {fileID: 1453912996, guid: f11cab94eaa8dd94b93c16b6fb7e5cd0, type: 3}
+  - {fileID: 794273931, guid: f11cab94eaa8dd94b93c16b6fb7e5cd0, type: 3}
+  walkUpSprites:
+  - {fileID: 1070243936, guid: f11cab94eaa8dd94b93c16b6fb7e5cd0, type: 3}
+  - {fileID: 1752478850, guid: f11cab94eaa8dd94b93c16b6fb7e5cd0, type: 3}
+  - {fileID: -1077709326, guid: f11cab94eaa8dd94b93c16b6fb7e5cd0, type: 3}
+  - {fileID: 1641148912, guid: f11cab94eaa8dd94b93c16b6fb7e5cd0, type: 3}
+  walkRightSprites:
+  - {fileID: -898086785, guid: f11cab94eaa8dd94b93c16b6fb7e5cd0, type: 3}
+  - {fileID: 1722407869, guid: f11cab94eaa8dd94b93c16b6fb7e5cd0, type: 3}
+  - {fileID: -180795348, guid: f11cab94eaa8dd94b93c16b6fb7e5cd0, type: 3}
+  - {fileID: -1329202467, guid: f11cab94eaa8dd94b93c16b6fb7e5cd0, type: 3}
+  walkLeftSprites:
+  - {fileID: -1549981199, guid: f11cab94eaa8dd94b93c16b6fb7e5cd0, type: 3}
+  - {fileID: -2003460071, guid: f11cab94eaa8dd94b93c16b6fb7e5cd0, type: 3}
+  - {fileID: -2045997316, guid: f11cab94eaa8dd94b93c16b6fb7e5cd0, type: 3}
+  - {fileID: 371124004, guid: f11cab94eaa8dd94b93c16b6fb7e5cd0, type: 3}
+--- !u!114 &307138838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307138831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ecb54fe3d6b63943aed39e405bac7b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
 --- !u!1 &308959373
 GameObject:
   m_ObjectHideFlags: 0
@@ -10228,6 +10281,7 @@ GameObject:
   - component: {fileID: 1084199986}
   - component: {fileID: 1084199985}
   - component: {fileID: 1084199987}
+  - component: {fileID: 1084199988}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -10280,6 +10334,27 @@ MonoBehaviour:
   dialogBox: {fileID: 1408827401}
   dialogText: {fileID: 1226407716}
   lettersPerSecond: 45
+--- !u!114 &1084199988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084199984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca0658a2b21343b4b8e8984a99449e06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  solidObjectsLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  grassLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1 &1146520517
 GameObject:
   m_ObjectHideFlags: 0
@@ -10449,8 +10524,9 @@ GameObject:
   - component: {fileID: 1190585888}
   - component: {fileID: 1190585887}
   - component: {fileID: 1190585886}
-  - component: {fileID: 1190585889}
   - component: {fileID: 1190585890}
+  - component: {fileID: 1190585891}
+  - component: {fileID: 1190585892}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -10470,16 +10546,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d60dc8e598467449bc88e4a30027ed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  solidObjectsLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  interactableLayer:
-    serializedVersion: 2
-    m_Bits: 1024
-  grassLayer:
-    serializedVersion: 2
-    m_Bits: 512
 --- !u!212 &1190585887
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10548,27 +10614,6 @@ Transform:
   - {fileID: 519420032}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1190585889
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190585885}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8ef90a9aadd2ea748a8d75d94ccf5ad8, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1190585890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10594,6 +10639,51 @@ MonoBehaviour:
     level: 8
   - _base: {fileID: 11400000, guid: b3bdba61f5c0d8e45a426f51736dbd87, type: 2}
     level: 12
+--- !u!114 &1190585891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190585885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c354b564bba7fe54cbdf79c63b1e7d1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkDownSprites:
+  - {fileID: 7152930139536384079, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  - {fileID: -5725962078152895296, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  - {fileID: -8401692288953904933, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  - {fileID: 7888922196035610388, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  walkUpSprites:
+  - {fileID: -4445699719359273135, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  - {fileID: 1892806461834874077, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  - {fileID: -8627026541424588849, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  - {fileID: -6780520195603233165, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  walkRightSprites:
+  - {fileID: -3303779423006393323, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  - {fileID: -790699523677361007, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  - {fileID: 8470420716495695676, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  - {fileID: 6167071470516247665, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  walkLeftSprites:
+  - {fileID: -1038918931832879880, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  - {fileID: 2690600881683387669, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  - {fileID: 6634202828824015816, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  - {fileID: -5008138227279614530, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+--- !u!114 &1190585892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190585885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ecb54fe3d6b63943aed39e405bac7b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
 --- !u!1 &1226407714
 GameObject:
   m_ObjectHideFlags: 0
