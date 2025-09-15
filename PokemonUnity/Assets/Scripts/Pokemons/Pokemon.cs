@@ -9,6 +9,14 @@ public class Pokemon
     [SerializeField] PokemonBase _base;
     [SerializeField] int level;
 
+    public Pokemon(PokemonBase pBase, int pLevel)
+    {
+        _base = pBase;
+        level = pLevel;
+
+        Init();
+    }
+
     public PokemonBase Base
     {
         get { return _base; }
@@ -22,6 +30,7 @@ public class Pokemon
         }
     }
 
+    public int Exp { get; set; }
     public int HP {  get; set; }
     public List<Move> Moves { get; set; }
     public Move CurrentMove { get; set; }
@@ -32,7 +41,7 @@ public class Pokemon
     public Condition VolatileStatus { get; private set; }
     public int VolatileStatusTime { get; set; }
 
-    public Queue<string> StatusChanges { get; private set; } = new Queue<string>();
+    public Queue<string> StatusChanges { get; private set; }
     public bool HpChanged { get; set; }
     public event System.Action OnStatusChanged;
 
@@ -47,13 +56,16 @@ public class Pokemon
             if (move.Level <= Level)
                 Moves.Add(new Move(move.Base));
 
-            if (Moves.Count >= 4)
+            if (Moves.Count >= PokemonBase.MaxNumOfMoves)
                 break;
         }
+
+        Exp = Base.GetExpForLevel(Level);
 
         CalculateStats();
         HP = MaxHp;
 
+        StatusChanges = new Queue<string>();
         ResetStatBoost();
         Status = null;
         VolatileStatus = null;
@@ -117,6 +129,30 @@ public class Pokemon
 
             Debug.Log($"{stat} foi impulsionado para {StatBoosts[stat]}");
         }
+    }
+
+    public bool CheckForLevelUp()
+    {
+        if (Exp > Base.GetExpForLevel(level + 1))
+        {
+            ++level;
+            return true;
+        }
+
+        return false;
+    }
+
+    public LearnableMove GetLearnableMoveAtCurrLevel()
+    {
+        return Base.LearnableMoves.Where(x => x.Level == level).FirstOrDefault();
+    }
+
+    public void LearnMove(LearnableMove moveToLearn)
+    {
+        if (Moves.Count > PokemonBase.MaxNumOfMoves)
+            return;
+
+        Moves.Add(new Move(moveToLearn.Base));
     }
 
     public int Attack
