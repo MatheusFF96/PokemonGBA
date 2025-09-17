@@ -39,7 +39,7 @@ public class TrainerController : MonoBehaviour, Interactable
         {
             StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
             {
-                GameController.Instace.StartTrainerBattle(this);
+                GameController.Instance.StartTrainerBattle(this);
             }));
         }
         else
@@ -71,7 +71,7 @@ public class TrainerController : MonoBehaviour, Interactable
         // Show Dialog
         StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
         {
-            GameController.Instace.StartTrainerBattle(this);
+            GameController.Instance.StartTrainerBattle(this);
         }));
     }
 

@@ -34,3 +34,21 @@ MonoBehaviour:
     level: 1
   - moveBase: {fileID: 11400000, guid: 846f84c7822b35f4d9cda4b1e40a7f62, type: 2}
     level: 10
+  - moveBase: {fileID: 11400000, guid: 8d8ce6ef1daa54e41a5a425fd547464e, type: 2}
+    level: 20
+  - moveBase: {fileID: 11400000, guid: 740766050e967bb4b897263fdc0ca3fe, type: 2}
+    level: 30
+  - moveBase: {fileID: 11400000, guid: ef56181614b77a443a8ecdc659a6329e, type: 2}
+    level: 40
+  - moveBase: {fileID: 11400000, guid: 37877af7f35cae54a98d93ba63d9b42a, type: 2}
+    level: 50
+  - moveBase: {fileID: 11400000, guid: cf5b59e9592ac984582ce0a668f32d44, type: 2}
+    level: 60
+  - moveBase: {fileID: 11400000, guid: 6eb4c28081b514544adcef46002352d2, type: 2}
+    level: 70
+  - moveBase: {fileID: 11400000, guid: 76b6497ca0d229d4da57de5bbcaa828a, type: 2}
+    level: 80
+  - moveBase: {fileID: 11400000, guid: 611f4bb3d9bee474da579a4b8013f0b3, type: 2}
+    level: 90
+  - moveBase: {fileID: 11400000, guid: 5af9d8053d7680f41b2a94b656c1f152, type: 2}
+    level: 100

@@ -30,9 +30,43 @@ MonoBehaviour:
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 8d8ce6ef1daa54e41a5a425fd547464e, type: 2}
     level: 1
+  - moveBase: {fileID: 11400000, guid: b1da94c88f1648d4085d195c26a8c524, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: fd2c2cdf02e27764fb549fb31696766c, type: 2}
+    level: 1
   - moveBase: {fileID: 11400000, guid: d92138709f111d643a2bdeda3c6d31c1, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 8b9e2862b35599b47b443799a5235188, type: 2}
     level: 1
   - moveBase: {fileID: 11400000, guid: 7b69a34edc700084083e115b79c1a7fe, type: 2}
     level: 1
+  - moveBase: {fileID: 11400000, guid: 3be16f3615bf1ac44a679db3ed3bdd9b, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 9db556cdefd8a4d4dae839410db34612, type: 2}
+    level: 1
   - moveBase: {fileID: 11400000, guid: 7b931aad6695b3e4b931cb2fff964f1e, type: 2}
     level: 12
+  - moveBase: {fileID: 11400000, guid: b2bf05ff06958504d9aeccd19a6354d2, type: 2}
+    level: 16
+  - moveBase: {fileID: 11400000, guid: 6431390a0c0d2bb48856d6ec4e30e5bc, type: 2}
+    level: 20
+  - moveBase: {fileID: 11400000, guid: 2d8433bb4e3fb504cb949d370a58c7ae, type: 2}
+    level: 24
+  - moveBase: {fileID: 11400000, guid: c9747677b49ee07438622f9c279e7723, type: 2}
+    level: 28
+  - moveBase: {fileID: 11400000, guid: 431cb542bed35be4c857fa224fd1bf1f, type: 2}
+    level: 32
+  - moveBase: {fileID: 11400000, guid: 7e27fe996caa5fe43a7236fd332e1179, type: 2}
+    level: 36
+  - moveBase: {fileID: 11400000, guid: 2368c93202a389c4a9a2d6ef2d55234a, type: 2}
+    level: 36
+  - moveBase: {fileID: 11400000, guid: dde4bde0079d23b48bf3037c82236bfa, type: 2}
+    level: 36
+  - moveBase: {fileID: 11400000, guid: 897d6a66a5d1fa647918e1a1b5ecd962, type: 2}
+    level: 40
+  - moveBase: {fileID: 11400000, guid: 15e93e9696d065b44b8dbd2e67ce3e76, type: 2}
+    level: 44
+  - moveBase: {fileID: 11400000, guid: 5af9d8053d7680f41b2a94b656c1f152, type: 2}
+    level: 48
+  - moveBase: {fileID: 11400000, guid: 1f05114967d3fc747b1e890cf9dfb83c, type: 2}
+    level: 52

@@ -28,7 +28,23 @@ MonoBehaviour:
   growthRate: 0
   catchRate: 150
   learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 7d26192c7d85a404ba1072fc149199d5, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: b1da94c88f1648d4085d195c26a8c524, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 120ab4dbfef75434996ae32402a6be79, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: a2cdd1cd53aeee049b1051c438c7dbae, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 22a42e9eb5e6fb64394db764602aefc0, type: 2}
+    level: 1
   - moveBase: {fileID: 11400000, guid: 8b9e2862b35599b47b443799a5235188, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 09b43e5dc3b3b874583aa60e8082b39c, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 12a07956a5b4fd043869bcaa4532eae3, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: b34d1949eed198f4992634d28c2a9fa4, type: 2}
     level: 1
   - moveBase: {fileID: 11400000, guid: 2c4834c218f5d1849873cf2c6ede2feb, type: 2}
     level: 4
@@ -36,3 +52,21 @@ MonoBehaviour:
     level: 8
   - moveBase: {fileID: 11400000, guid: fd9fef261187e8149961ed2c77437275, type: 2}
     level: 12
+  - moveBase: {fileID: 11400000, guid: ef56181614b77a443a8ecdc659a6329e, type: 2}
+    level: 16
+  - moveBase: {fileID: 11400000, guid: cf5b59e9592ac984582ce0a668f32d44, type: 2}
+    level: 20
+  - moveBase: {fileID: 11400000, guid: d9fde332969bf3647a9cf38f9237b186, type: 2}
+    level: 24
+  - moveBase: {fileID: 11400000, guid: 3e40ba517aaaae248b2396634bc660f7, type: 2}
+    level: 28
+  - moveBase: {fileID: 11400000, guid: 1011566aa0ad11e48ae8fa2e6fd8c788, type: 2}
+    level: 32
+  - moveBase: {fileID: 11400000, guid: 2ac2fac4c46dd3d46a59abd93c8e423a, type: 2}
+    level: 36
+  - moveBase: {fileID: 11400000, guid: 65a4e2697eb45764a85767ce7ab367bb, type: 2}
+    level: 40
+  - moveBase: {fileID: 11400000, guid: 875609b90fb74cf47b2d59b3c2f169ab, type: 2}
+    level: 44
+  - moveBase: {fileID: 11400000, guid: 817aebd6a89745e44a7eee27d93253a6, type: 2}
+    level: 48

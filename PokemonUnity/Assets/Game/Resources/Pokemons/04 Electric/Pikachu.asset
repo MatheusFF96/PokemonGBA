@@ -28,11 +28,43 @@ MonoBehaviour:
   growthRate: 1
   catchRate: 190
   learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 01ad743a3b55d8b40b410729e8b82382, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: d25786bbe517e23448ccac4b48d81e06, type: 2}
+    level: 1
   - moveBase: {fileID: 11400000, guid: a18d267c0f525084a8f965a74263a0eb, type: 2}
     level: 1
-  - moveBase: {fileID: 11400000, guid: 01ad743a3b55d8b40b410729e8b82382, type: 2}
+  - moveBase: {fileID: 11400000, guid: 7d26192c7d85a404ba1072fc149199d5, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 22a42e9eb5e6fb64394db764602aefc0, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 37877af7f35cae54a98d93ba63d9b42a, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: b752d0a2dfe859741a2f987c86a4ed41, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: b34d1949eed198f4992634d28c2a9fa4, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: e5ca16ccfc077d2479b182d7a8185844, type: 2}
     level: 1
   - moveBase: {fileID: 11400000, guid: 05c70c02b7782a14984f92ad25d27d3b, type: 2}
     level: 4
   - moveBase: {fileID: 11400000, guid: 17f2ec49614ff2446820f68951bcbadb, type: 2}
     level: 8
+  - moveBase: {fileID: 11400000, guid: a910968180c0d2645a074dac7a6183a1, type: 2}
+    level: 12
+  - moveBase: {fileID: 11400000, guid: 5138d897dc354f947b6daebc9002ac20, type: 2}
+    level: 16
+  - moveBase: {fileID: 11400000, guid: 7d285df9fe4540d42aa3ec8d84ecf48b, type: 2}
+    level: 20
+  - moveBase: {fileID: 11400000, guid: c9a60fcfe66bcc64db5820b524cafec3, type: 2}
+    level: 24
+  - moveBase: {fileID: 11400000, guid: 1b1f72637587bdd4f944bd80a2aa66f5, type: 2}
+    level: 28
+  - moveBase: {fileID: 11400000, guid: 3dfae3e58046c384f8bb4a7c436e2434, type: 2}
+    level: 32
+  - moveBase: {fileID: 11400000, guid: 24ad7e3b6c855d14f8a83fa19dd282bc, type: 2}
+    level: 36
+  - moveBase: {fileID: 11400000, guid: 7e27fe996caa5fe43a7236fd332e1179, type: 2}
+    level: 40
+  - moveBase: {fileID: 11400000, guid: c5cf96caa3d558c4bbff13b1ccd2876b, type: 2}
+    level: 44
