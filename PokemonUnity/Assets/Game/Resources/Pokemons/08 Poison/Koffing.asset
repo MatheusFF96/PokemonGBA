@@ -30,9 +30,21 @@ MonoBehaviour:
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 7a2838be1e90b154e9a7ba4655b54bd5, type: 2}
     level: 1
+  - moveBase: {fileID: 11400000, guid: 7bf70508323f2924cb177a3b69c96f8f, type: 2}
+    level: 1
   - moveBase: {fileID: 11400000, guid: 873fde597fb70154c9c3858ef643b511, type: 2}
     level: 4
   - moveBase: {fileID: 11400000, guid: 4c56a2edcab7680418ef7d998e34475e, type: 2}
     level: 8
   - moveBase: {fileID: 11400000, guid: 0d4dad3cd2c30294fbd42524b5effbeb, type: 2}
     level: 12
+  - moveBase: {fileID: 11400000, guid: aaa0182182b834d40800a58d08367db9, type: 2}
+    level: 16
+  - moveBase: {fileID: 11400000, guid: 61ae0ea49eab6b7418773304875c4529, type: 2}
+    level: 20
+  - moveBase: {fileID: 11400000, guid: 16825d21d631d4243a14da70ad1fdf1e, type: 2}
+    level: 24
+  - moveBase: {fileID: 11400000, guid: b1e40b9cdc72424458947e18f215e729, type: 2}
+    level: 28
+  - moveBase: {fileID: 11400000, guid: c30abd9a73bebc54388e40e9b9e28b8e, type: 2}
+    level: 32
