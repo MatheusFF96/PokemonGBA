@@ -1215,6 +1215,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trainer 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4662466910586515332, guid: 4f963a6e3edc43546bfd6624f6a5b0b3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4898446010072242608, guid: 4f963a6e3edc43546bfd6624f6a5b0b3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9
