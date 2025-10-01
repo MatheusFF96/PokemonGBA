@@ -30,6 +30,11 @@ public class GameController : MonoBehaviour
 
         menuController = GetComponent<MenuController>();
 
+        /* DESATIVA MOUSE IN GAME
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        */
+
         PokemonDB.Init();
         MoveDB.Init();
         ConditionsDB.Init();
@@ -185,7 +190,6 @@ public class GameController : MonoBehaviour
         {
             // Pokemon
             partyScreen.gameObject.SetActive(true);
-            partyScreen.SetPartyData(playerController.GetComponent<PokemonParty>().Pokemons);
             state = GameState.PartyScreen;
         }
         else if (selectedItem == 1)

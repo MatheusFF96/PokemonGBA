@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 4307457262273336630}
   - component: {fileID: 3310465897648001935}
   - component: {fileID: 7579750712166820923}
+  - component: {fileID: 5018126545477261556}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -352,3 +353,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueId: 
+--- !u!114 &5018126545477261556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8634749673693591754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5666a279b2f0d6498dd028ed55a75f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slots:
+  - item: {fileID: 11400000, guid: 9e6ac4c745c0bc743913dfaf5af352ce, type: 2}
+    count: 5
+  - item: {fileID: 11400000, guid: facbd17250a3f8741992087178a2179b, type: 2}
+    count: 2
+  - item: {fileID: 11400000, guid: dd8a49d08a6c4084c88064faff1cbd06, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: 11a67f45e0ab406419902a1621114d25, type: 2}
+    count: 2
+  - item: {fileID: 11400000, guid: ee6c372209d47c64c808135b2568f921, type: 2}
+    count: 2
+  - item: {fileID: 11400000, guid: 02456129be254534db99298f698f44d7, type: 2}
+    count: 4
+  - item: {fileID: 11400000, guid: dd8a49d08a6c4084c88064faff1cbd06, type: 2}
+    count: 4
+  - item: {fileID: 11400000, guid: 02456129be254534db99298f698f44d7, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: 0cd569dc103364c4bb881ae046d35266, type: 2}
+    count: 5
+  - item: {fileID: 11400000, guid: 02456129be254534db99298f698f44d7, type: 2}
+    count: 2
+  - item: {fileID: 11400000, guid: d19c14fe044af464bad8238add7f1f38, type: 2}
+    count: 3
+  - item: {fileID: 11400000, guid: 02456129be254534db99298f698f44d7, type: 2}
+    count: 2
+  - item: {fileID: 11400000, guid: ee6c372209d47c64c808135b2568f921, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: 11a67f45e0ab406419902a1621114d25, type: 2}
+    count: 1
