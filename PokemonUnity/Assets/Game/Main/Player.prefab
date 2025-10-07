@@ -218,10 +218,10 @@ MonoBehaviour:
     level: 12
   - _base: {fileID: 11400000, guid: df67637de5e266b47865cce939c4a976, type: 2}
     level: 13
-  - _base: {fileID: 11400000, guid: 3bbd9e7518168f044adce1d3efa2fed7, type: 2}
-    level: 4
   - _base: {fileID: 11400000, guid: 26c75ea52d603a14d8d1f55ddd85ee06, type: 2}
     level: 8
+  - _base: {fileID: 11400000, guid: 3bbd9e7518168f044adce1d3efa2fed7, type: 2}
+    level: 2
 --- !u!114 &8954286909545856390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,15 +382,33 @@ MonoBehaviour:
     count: 4
   - item: {fileID: 11400000, guid: 02456129be254534db99298f698f44d7, type: 2}
     count: 1
-  - item: {fileID: 11400000, guid: 0cd569dc103364c4bb881ae046d35266, type: 2}
-    count: 5
   - item: {fileID: 11400000, guid: 02456129be254534db99298f698f44d7, type: 2}
-    count: 2
+    count: 5
   - item: {fileID: 11400000, guid: d19c14fe044af464bad8238add7f1f38, type: 2}
     count: 3
-  - item: {fileID: 11400000, guid: 02456129be254534db99298f698f44d7, type: 2}
+  - item: {fileID: 11400000, guid: d059b5088dce7e644bfa1ae3a61514ba, type: 2}
     count: 2
   - item: {fileID: 11400000, guid: ee6c372209d47c64c808135b2568f921, type: 2}
     count: 1
   - item: {fileID: 11400000, guid: 11a67f45e0ab406419902a1621114d25, type: 2}
     count: 1
+  - item: {fileID: 11400000, guid: 0cd569dc103364c4bb881ae046d35266, type: 2}
+    count: 1
+  pokeballSlots:
+  - item: {fileID: 11400000, guid: 1930d52690d5f0141bdfe1914d00e8b5, type: 2}
+    count: 8
+  - item: {fileID: 11400000, guid: 7916f66713b63fa46bc5d376dead553f, type: 2}
+    count: 7
+  - item: {fileID: 11400000, guid: b69cc15aac1ce2b48adf0c4db2988fb0, type: 2}
+    count: 6
+  - item: {fileID: 11400000, guid: bf26392e763763848968fdea47d07c30, type: 2}
+    count: 5
+  - item: {fileID: 11400000, guid: 08131100bf2fb30459a747bb048ce498, type: 2}
+    count: 4
+  - item: {fileID: 11400000, guid: c30fad69a074f774fb4bfbea9ce2229a, type: 2}
+    count: 3
+  - item: {fileID: 11400000, guid: d2db1437d477be64d86d901fc7598322, type: 2}
+    count: 2
+  - item: {fileID: 11400000, guid: 4b9f21189aa11d9438229cdaaf6ecf0e, type: 2}
+    count: 1
+  tmSlots: []

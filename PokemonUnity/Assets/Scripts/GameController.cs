@@ -14,7 +14,6 @@ public class GameController : MonoBehaviour
     [SerializeField] InventoryUI inventoryUI;
 
     GameState state;
-
     GameState stateBeforePause;
 
     public SceneDetails CurrentScene {  get; private set; }
@@ -211,4 +210,6 @@ public class GameController : MonoBehaviour
             state = GameState.FreeRoam;
         }        
     }
+
+    public GameState State => state;
 }
