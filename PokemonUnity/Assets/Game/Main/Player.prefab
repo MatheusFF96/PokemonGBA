@@ -215,7 +215,7 @@ MonoBehaviour:
   - _base: {fileID: 11400000, guid: 469a2bbdd58ce99478b84bb836f0eca1, type: 2}
     level: 7
   - _base: {fileID: 11400000, guid: 2e86bc24b795d7d4baab07a3b0de0e12, type: 2}
-    level: 12
+    level: 2
   - _base: {fileID: 11400000, guid: df67637de5e266b47865cce939c4a976, type: 2}
     level: 13
   - _base: {fileID: 11400000, guid: 26c75ea52d603a14d8d1f55ddd85ee06, type: 2}
@@ -414,5 +414,7 @@ MonoBehaviour:
   tmSlots:
   - item: {fileID: 11400000, guid: d9cb0a81c879bd14fbfcbee02ee029bf, type: 2}
     count: 1
-  - item: {fileID: 11400000, guid: 72c749a53698e464d876959657ce853b, type: 2}
+  - item: {fileID: 11400000, guid: 14beb1e65faf11e479f378d8574a120a, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: 5dbf72809a956c4488ae36949bad7410, type: 2}
     count: 1
