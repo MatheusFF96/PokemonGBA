@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 4307457262273336630}
   - component: {fileID: 3310465897648001935}
   - component: {fileID: 7579750712166820923}
+  - component: {fileID: 5018126545477261556}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -212,15 +213,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pokemons:
   - _base: {fileID: 11400000, guid: 469a2bbdd58ce99478b84bb836f0eca1, type: 2}
-    level: 11
+    level: 7
   - _base: {fileID: 11400000, guid: 2e86bc24b795d7d4baab07a3b0de0e12, type: 2}
-    level: 12
+    level: 2
   - _base: {fileID: 11400000, guid: df67637de5e266b47865cce939c4a976, type: 2}
     level: 13
-  - _base: {fileID: 11400000, guid: 3bbd9e7518168f044adce1d3efa2fed7, type: 2}
-    level: 4
   - _base: {fileID: 11400000, guid: 26c75ea52d603a14d8d1f55ddd85ee06, type: 2}
     level: 8
+  - _base: {fileID: 11400000, guid: 3bbd9e7518168f044adce1d3efa2fed7, type: 2}
+    level: 2
 --- !u!114 &8954286909545856390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,3 +353,68 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueId: 
+--- !u!114 &5018126545477261556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8634749673693591754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5666a279b2f0d6498dd028ed55a75f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slots:
+  - item: {fileID: 11400000, guid: 9e6ac4c745c0bc743913dfaf5af352ce, type: 2}
+    count: 5
+  - item: {fileID: 11400000, guid: facbd17250a3f8741992087178a2179b, type: 2}
+    count: 2
+  - item: {fileID: 11400000, guid: dd8a49d08a6c4084c88064faff1cbd06, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: 11a67f45e0ab406419902a1621114d25, type: 2}
+    count: 2
+  - item: {fileID: 11400000, guid: ee6c372209d47c64c808135b2568f921, type: 2}
+    count: 2
+  - item: {fileID: 11400000, guid: 02456129be254534db99298f698f44d7, type: 2}
+    count: 4
+  - item: {fileID: 11400000, guid: dd8a49d08a6c4084c88064faff1cbd06, type: 2}
+    count: 4
+  - item: {fileID: 11400000, guid: 02456129be254534db99298f698f44d7, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: 02456129be254534db99298f698f44d7, type: 2}
+    count: 5
+  - item: {fileID: 11400000, guid: d19c14fe044af464bad8238add7f1f38, type: 2}
+    count: 3
+  - item: {fileID: 11400000, guid: d059b5088dce7e644bfa1ae3a61514ba, type: 2}
+    count: 2
+  - item: {fileID: 11400000, guid: ee6c372209d47c64c808135b2568f921, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: 11a67f45e0ab406419902a1621114d25, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: 0cd569dc103364c4bb881ae046d35266, type: 2}
+    count: 1
+  pokeballSlots:
+  - item: {fileID: 11400000, guid: 1930d52690d5f0141bdfe1914d00e8b5, type: 2}
+    count: 8
+  - item: {fileID: 11400000, guid: 7916f66713b63fa46bc5d376dead553f, type: 2}
+    count: 7
+  - item: {fileID: 11400000, guid: b69cc15aac1ce2b48adf0c4db2988fb0, type: 2}
+    count: 6
+  - item: {fileID: 11400000, guid: bf26392e763763848968fdea47d07c30, type: 2}
+    count: 5
+  - item: {fileID: 11400000, guid: 08131100bf2fb30459a747bb048ce498, type: 2}
+    count: 4
+  - item: {fileID: 11400000, guid: c30fad69a074f774fb4bfbea9ce2229a, type: 2}
+    count: 3
+  - item: {fileID: 11400000, guid: d2db1437d477be64d86d901fc7598322, type: 2}
+    count: 2
+  - item: {fileID: 11400000, guid: 4b9f21189aa11d9438229cdaaf6ecf0e, type: 2}
+    count: 1
+  tmSlots:
+  - item: {fileID: 11400000, guid: d9cb0a81c879bd14fbfcbee02ee029bf, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: 14beb1e65faf11e479f378d8574a120a, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: 5dbf72809a956c4488ae36949bad7410, type: 2}
+    count: 1

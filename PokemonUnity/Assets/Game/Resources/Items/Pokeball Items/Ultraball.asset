@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daa3e643c913c324a81e59e6a55cada7, type: 3}
+  m_Name: Ultraball
+  m_EditorClassIdentifier: 
+  name: Ultra Ball
+  description: Uma pokeball com 2x de chances de capturar um pokemon.
+  icon: {fileID: -2598005947579844795, guid: f64ca9a0e50d2214aa7054deb58e16bc, type: 3}
+  catchRateModifier: 2

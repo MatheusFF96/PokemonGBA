@@ -1,27 +1,38 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { FreeRoam, Battle, Dialog, Cutscene, Paused }
+public enum GameState { FreeRoam, Battle, Dialog, Menu, PartyScreen, Bag, Cutscene, Paused }
 
 public class GameController : MonoBehaviour
 {
     [SerializeField] PlayerController playerController;
     [SerializeField] BattleSystem battleSystem;
     [SerializeField] Camera worldCamera;
+    [SerializeField] PartyScreen partyScreen;
+    [SerializeField] InventoryUI inventoryUI;
 
     GameState state;
-
     GameState stateBeforePause;
 
     public SceneDetails CurrentScene {  get; private set; }
     public SceneDetails PrevScene {  get; private set; }
+
+    MenuController menuController;
 
     public static GameController Instance { get; private set; }
 
     private void Awake()
     {
         Instance = this;
+
+        menuController = GetComponent<MenuController>();
+
+        /* DESATIVA MOUSE IN GAME
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        */
 
         PokemonDB.Init();
         MoveDB.Init();
@@ -31,6 +42,8 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         battleSystem.OnBattleOver += EndBattle;
+
+        partyScreen.Init();
 
         DialogManager.Instance.OnShowDialog += () =>
         {
@@ -42,6 +55,13 @@ public class GameController : MonoBehaviour
             if (state == GameState.Dialog)
                 state = GameState.FreeRoam;
         };
+
+        menuController.onBack += () =>
+        {
+            state = GameState.FreeRoam;
+        };
+
+        menuController.onMenuSelected += OnMenuSelected;
     }
 
     public void PauseGame(bool pause)
@@ -111,13 +131,10 @@ public class GameController : MonoBehaviour
         {
             playerController.HandleUpdate();
 
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKeyDown(KeyCode.Return))
             {
-                SavingSystem.i.Save("saveSlot1");
-            }
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                SavingSystem.i.Load("saveSlot1");
+                menuController.OpenMenu();
+                state = GameState.Menu;
             }
         }
         else if (state == GameState.Battle)
@@ -128,6 +145,36 @@ public class GameController : MonoBehaviour
         {
             DialogManager.Instance.HandleUpdate();
         }
+        else if (state == GameState.Menu)
+        {
+            menuController.HandleUpdate();
+        }
+        else if (state == GameState.PartyScreen)
+        {
+            Action onSelected = () =>
+            {
+                // TODO: Go to Summary Screen
+            };
+
+            Action onBack = () =>
+            {
+                partyScreen.gameObject.SetActive(false);
+                state = GameState.FreeRoam;
+            };
+
+            partyScreen.HandleUpdate(onSelected, onBack);
+        }
+        else if (state == GameState.Bag)
+        {
+            Action onBack = () =>
+            {
+                inventoryUI.gameObject.SetActive(false);
+                state = GameState.FreeRoam;
+            };
+
+            inventoryUI.HandleUpdate(onBack);
+        }
+
     }
 
     public void SetCurrentScene(SceneDetails currScene)
@@ -135,4 +182,34 @@ public class GameController : MonoBehaviour
         PrevScene = CurrentScene;
         CurrentScene = currScene;
     }
+
+    void OnMenuSelected(int selectedItem)
+    {
+        if (selectedItem == 0)
+        {
+            // Pokemon
+            partyScreen.gameObject.SetActive(true);
+            state = GameState.PartyScreen;
+        }
+        else if (selectedItem == 1)
+        {
+            // Bag
+            inventoryUI.gameObject.SetActive(true);
+            state = GameState.Bag;
+        }
+        else if (selectedItem == 2)
+        {
+            // Save
+            SavingSystem.i.Save("saveSlot1");
+            state = GameState.FreeRoam;
+        }
+        else if (selectedItem == 3)
+        {
+            // Load
+            SavingSystem.i.Load("saveSlot1");
+            state = GameState.FreeRoam;
+        }        
+    }
+
+    public GameState State => state;
 }
