@@ -799,6 +799,10 @@ PrefabInstance:
       propertyPath: itemSlotUI
       value: 
       objectReference: {fileID: 6420591010207569666, guid: 29e8c3df7fc5c824b8deccd2f4228901, type: 3}
+    - target: {fileID: 3145945557919360233, guid: 898f471c02b6df64ba7dd284f2b13419, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 360
+      objectReference: {fileID: 0}
     - target: {fileID: 3152211058567615304, guid: 898f471c02b6df64ba7dd284f2b13419, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1

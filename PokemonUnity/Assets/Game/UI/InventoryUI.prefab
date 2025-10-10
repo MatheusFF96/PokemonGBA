@@ -1045,6 +1045,7 @@ MonoBehaviour:
   upArrow: {fileID: 7153206994070859193}
   downArrow: {fileID: 3378823225092931028}
   partyScreen: {fileID: 0}
+  moveSelectionUI: {fileID: 0}
 --- !u!1 &2187737320805969622
 GameObject:
   m_ObjectHideFlags: 0
@@ -2758,7 +2759,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -215, y: 3.8147}
-  m_SizeDelta: {x: 347.8, y: 399.5}
+  m_SizeDelta: {x: 3, y: 399.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5693887389735312117
 CanvasRenderer:
