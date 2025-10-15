@@ -13,4 +13,6 @@ public class LongGrass : MonoBehaviour, IPlayerTriggerable
             GameController.Instance.StartBattle();
         }
     }
+
+    public bool TriggerRepeatedly => true;
 }
