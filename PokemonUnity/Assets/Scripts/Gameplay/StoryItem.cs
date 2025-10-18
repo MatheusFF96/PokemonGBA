@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StoryItem : MonoBehaviour, IPlayerTriggerable
 {
-    [SerializeField] Dialog dialog;
+    [SerializeField] Dialog dialog;    
 
     public void OnPlayerTriggered(PlayerController player)
     {

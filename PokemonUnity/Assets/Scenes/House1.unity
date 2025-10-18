@@ -122,106 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &354361169
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4244560514043078074, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
-      propertyPath: m_Name
-      value: NPC
-      objectReference: {fileID: 0}
-    - target: {fileID: 5732588375001985921, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
-      propertyPath: uniqueId
-      value: 684d31fd-88a2-4a0d-9afd-17d734e08312
-      objectReference: {fileID: 0}
-    - target: {fileID: 7358719395410885587, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -33.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7358719395410885587, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7358719395410885587, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7358719395410885587, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7358719395410885587, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7358719395410885587, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7358719395410885587, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7358719395410885587, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7358719395410885587, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7358719395410885587, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7419787102138749837, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
-      propertyPath: questToComplete
-      value: 
-      objectReference: {fileID: 11400000, guid: 28ca32a3d5f3e4c4fb44a1815cf8213b, type: 2}
-    - target: {fileID: 7419787102138749837, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
-      propertyPath: dialog.lines.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7419787102138749837, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
-      propertyPath: dialog.lines.Array.data[0]
-      value: "Agora voc\xEA pode batalhar contra Pokemons selvagens na grama alta."
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4244560514043078074, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 354361171}
-  m_SourcePrefab: {fileID: 100100000, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
---- !u!1 &354361170 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4244560514043078074, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
-  m_PrefabInstance: {fileID: 354361169}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &354361171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 354361170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf0a2218fb452b74f9a7cab1f5363e1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pokemonToGive:
-    _base: {fileID: 11400000, guid: 469a2bbdd58ce99478b84bb836f0eca1, type: 2}
-    level: 5
-  dialog:
-    lines:
-    - "N\xE3o \xE9 seguro l\xE1 fora sem um Pokemon."
-    - "Voc\xEA pode ficar com esse Charmander!"
 --- !u!1001 &1354957371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -338,6 +238,10 @@ PrefabInstance:
     - target: {fileID: 3842233229783818499, guid: b49f2796361864e4eb3fc5167b5d9f69, type: 3}
       propertyPath: m_Name
       value: LocationPortal
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719937283177148292, guid: b49f2796361864e4eb3fc5167b5d9f69, type: 3}
+      propertyPath: destinationPortal
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1096,6 +1000,106 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7c5e56c5b3830f4bba240b204c36138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1724308994
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4244560514043078074, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
+      propertyPath: m_Name
+      value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 5732588375001985921, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
+      propertyPath: uniqueId
+      value: 8515202f-9149-4319-86bc-a6a8a51cb3a8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358719395410885587, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -33.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358719395410885587, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358719395410885587, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358719395410885587, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358719395410885587, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358719395410885587, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358719395410885587, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358719395410885587, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358719395410885587, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358719395410885587, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7419787102138749837, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
+      propertyPath: questToComplete
+      value: 
+      objectReference: {fileID: 11400000, guid: 28ca32a3d5f3e4c4fb44a1815cf8213b, type: 2}
+    - target: {fileID: 7419787102138749837, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7419787102138749837, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Agora voc\xEA pode batalhar contra pokemons selvagens."
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4244560514043078074, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1724308996}
+  m_SourcePrefab: {fileID: 100100000, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
+--- !u!1 &1724308995 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4244560514043078074, guid: 3f1207c12a54deb4dbfcdbfba772475c, type: 3}
+  m_PrefabInstance: {fileID: 1724308994}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1724308996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724308995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf0a2218fb452b74f9a7cab1f5363e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pokemonToGive:
+    _base: {fileID: 11400000, guid: 469a2bbdd58ce99478b84bb836f0eca1, type: 2}
+    level: 5
+  dialog:
+    lines:
+    - "N\xE3o \xE9 seguro l\xE1 fora sem um pokemon."
+    - "Voc\xEA pode ficar com esse Charmander!"
 --- !u!1 &1733490887
 GameObject:
   m_ObjectHideFlags: 0
@@ -4475,4 +4479,4 @@ SceneRoots:
   - {fileID: 1867338757935024582}
   - {fileID: 1354957371}
   - {fileID: 1539356084}
-  - {fileID: 354361169}
+  - {fileID: 1724308994}
