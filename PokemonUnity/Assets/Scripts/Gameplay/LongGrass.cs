@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 
 public class LongGrass : MonoBehaviour, IPlayerTriggerable
 {
@@ -13,4 +12,6 @@ public class LongGrass : MonoBehaviour, IPlayerTriggerable
             GameController.Instance.StartBattle();
         }
     }
+
+    public bool TriggerRepeatedly => true;
 }

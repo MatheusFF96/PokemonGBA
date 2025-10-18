@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,6 +17,8 @@ public class Portal : MonoBehaviour, IPlayerTriggerable
         this.player = player;
         StartCoroutine(SwitchScene());
     }
+
+    public bool TriggerRepeatedly => false;
 
     Fader fader;
     private void Start()

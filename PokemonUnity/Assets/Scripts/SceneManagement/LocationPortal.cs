@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 // Teleports the player to a different position without swithcing scenes
 public class LocationPortal : MonoBehaviour, IPlayerTriggerable
@@ -17,6 +16,7 @@ public class LocationPortal : MonoBehaviour, IPlayerTriggerable
         this.player = player;
         StartCoroutine(Teleport());
     }
+    public bool TriggerRepeatedly => false;
 
     Fader fader;
     private void Start()
