@@ -30,32 +30,18 @@ MonoBehaviour:
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 9299b2907db14b641aec382082777470, type: 2}
     level: 1
+  - moveBase: {fileID: 11400000, guid: 63e7357b0861a5c4982dc3c11451d8e5, type: 2}
+    level: 1
   - moveBase: {fileID: 11400000, guid: 7bf70508323f2924cb177a3b69c96f8f, type: 2}
     level: 1
-  - moveBase: {fileID: 11400000, guid: 2d8433bb4e3fb504cb949d370a58c7ae, type: 2}
-    level: 5
-  - moveBase: {fileID: 11400000, guid: 27dc55a6eacdd8c4389447cb666ddfb5, type: 2}
-    level: 10
-  - moveBase: {fileID: 11400000, guid: 01ad743a3b55d8b40b410729e8b82382, type: 2}
-    level: 15
   - moveBase: {fileID: 11400000, guid: c9747677b49ee07438622f9c279e7723, type: 2}
-    level: 20
-  - moveBase: {fileID: 11400000, guid: 07431830dfcb8144882820340d76f3ff, type: 2}
-    level: 25
-  - moveBase: {fileID: 11400000, guid: c9a60fcfe66bcc64db5820b524cafec3, type: 2}
-    level: 30
+    level: 23
   - moveBase: {fileID: 11400000, guid: 5f6e024afba93b94a8d58edc37ceef7e, type: 2}
+    level: 28
+  - moveBase: {fileID: 11400000, guid: c9a60fcfe66bcc64db5820b524cafec3, type: 2}
     level: 35
-  - moveBase: {fileID: 11400000, guid: 3dfae3e58046c384f8bb4a7c436e2434, type: 2}
-    level: 40
   - moveBase: {fileID: 11400000, guid: 9ab8334e890cb6b4ca4fd728df5fba82, type: 2}
-    level: 45
-  - moveBase: {fileID: 11400000, guid: 6888ec1f5559b744b9213f56d67571c0, type: 2}
-    level: 50
-  - moveBase: {fileID: 11400000, guid: 273d415cad1d4b34b881d031b6b425cc, type: 2}
-    level: 55
-  - moveBase: {fileID: 11400000, guid: bc0aceab736d584498cb3d3caa3ccb40, type: 2}
-    level: 60
+    level: 42
   learnableByItems:
   - {fileID: 11400000, guid: 7397eae38abcb5d48aabfa2010a3f843, type: 2}
   - {fileID: 11400000, guid: 40eb3aea0555fc9498958a21a5653f73, type: 2}
@@ -80,3 +66,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9ab8334e890cb6b4ca4fd728df5fba82, type: 2}
   - {fileID: 11400000, guid: 2cdfa878730c41b46bb5e6a4183e15ef, type: 2}
   - {fileID: 11400000, guid: a840a842dc8670345adcecef7c8a0bce, type: 2}
+  evolutions: []

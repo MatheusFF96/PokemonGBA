@@ -28,30 +28,20 @@ MonoBehaviour:
   growthRate: 1
   catchRate: 45
   learnableMoves:
-  - moveBase: {fileID: 11400000, guid: 120ab4dbfef75434996ae32402a6be79, type: 2}
-    level: 1
-  - moveBase: {fileID: 11400000, guid: 2eb0b845c38592446a6507520d11a254, type: 2}
-    level: 1
-  - moveBase: {fileID: 11400000, guid: 401628d1f14265a48954fc00772a37b8, type: 2}
-    level: 6
   - moveBase: {fileID: 11400000, guid: 42fd88024bdf87142912d3663a1bbd7b, type: 2}
-    level: 12
+    level: 1
   - moveBase: {fileID: 11400000, guid: d4fd0f518a0935c4a9acf658c7d08c56, type: 2}
-    level: 18
-  - moveBase: {fileID: 11400000, guid: f1ccfa586ce16e246a38880b9b9b86cc, type: 2}
-    level: 24
+    level: 1
   - moveBase: {fileID: 11400000, guid: 98e92a15c673d164aadb13a9ac82a387, type: 2}
-    level: 30
-  - moveBase: {fileID: 11400000, guid: e289c70630ec38545a4bbd72ae89b811, type: 2}
-    level: 36
-  - moveBase: {fileID: 11400000, guid: 9aac6d42721ea7c4fb192072f577791c, type: 2}
-    level: 42
+    level: 7
+  - moveBase: {fileID: 11400000, guid: f1ccfa586ce16e246a38880b9b9b86cc, type: 2}
+    level: 15
+  - moveBase: {fileID: 11400000, guid: 120ab4dbfef75434996ae32402a6be79, type: 2}
+    level: 23
   - moveBase: {fileID: 11400000, guid: dead2df1bbd712148bc91baf9acbc6f7, type: 2}
-    level: 48
-  - moveBase: {fileID: 11400000, guid: a8a1d70e638443942bd15ccea73387cd, type: 2}
-    level: 54
-  - moveBase: {fileID: 11400000, guid: 6e9966724bcb57c40bbbcec8dd64250a, type: 2}
-    level: 60
+    level: 31
+  - moveBase: {fileID: 11400000, guid: 9aac6d42721ea7c4fb192072f577791c, type: 2}
+    level: 39
   learnableByItems:
   - {fileID: 11400000, guid: b767de59c85fca5428e5a0b4ec407bd6, type: 2}
   - {fileID: 11400000, guid: 0a4b26451b104cb4082f670b5355a9a2, type: 2}
@@ -83,3 +73,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 06b8541afb6e3da479dfae2a24b9328c, type: 2}
   - {fileID: 11400000, guid: 80f2812c8e67bf54c87b4421d4e78399, type: 2}
   - {fileID: 11400000, guid: ff24a3150e746b24da30c6f6407c942f, type: 2}
+  evolutions: []

@@ -32,32 +32,16 @@ MonoBehaviour:
     level: 1
   - moveBase: {fileID: 11400000, guid: e5ca16ccfc077d2479b182d7a8185844, type: 2}
     level: 1
-  - moveBase: {fileID: 11400000, guid: f1ccfa586ce16e246a38880b9b9b86cc, type: 2}
-    level: 4
   - moveBase: {fileID: 11400000, guid: a18d267c0f525084a8f965a74263a0eb, type: 2}
-    level: 8
-  - moveBase: {fileID: 11400000, guid: eb4586e98b2fd6f4a83b014d65e86723, type: 2}
-    level: 12
-  - moveBase: {fileID: 11400000, guid: b9eaebf9464abe545bebb2dd59f2155b, type: 2}
     level: 16
+  - moveBase: {fileID: 11400000, guid: 1f9d520246026ea49b494e2b605a6679, type: 2}
+    level: 21
   - moveBase: {fileID: 11400000, guid: ec497446397417c429896c1f4b5b354a, type: 2}
-    level: 20
-  - moveBase: {fileID: 11400000, guid: 6ec37b8bdf0c6b64fbd1e612f17262e8, type: 2}
-    level: 24
-  - moveBase: {fileID: 11400000, guid: 1d0fa23335dcf2749a7c87cf97af5fa5, type: 2}
     level: 28
   - moveBase: {fileID: 11400000, guid: 4b1e0bb8ed6d11c4fb82a48e639f92c4, type: 2}
-    level: 32
-  - moveBase: {fileID: 11400000, guid: 6eb4c28081b514544adcef46002352d2, type: 2}
-    level: 36
+    level: 35
   - moveBase: {fileID: 11400000, guid: a6e9ce54c32e9ac479598d9ca5d92b13, type: 2}
-    level: 40
-  - moveBase: {fileID: 11400000, guid: dde4bde0079d23b48bf3037c82236bfa, type: 2}
-    level: 44
-  - moveBase: {fileID: 11400000, guid: 7c4c60ded3edce34b993d25ec2b736a5, type: 2}
-    level: 48
-  - moveBase: {fileID: 11400000, guid: e429668589c1d8045ae036b4544216fa, type: 2}
-    level: 52
+    level: 42
   learnableByItems:
   - {fileID: 11400000, guid: 7397eae38abcb5d48aabfa2010a3f843, type: 2}
   - {fileID: 11400000, guid: 2b86811526756f4458b115576697fabb, type: 2}
@@ -74,3 +58,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b93e45a378a864948b733f497b41ec3f, type: 2}
   - {fileID: 11400000, guid: c9a489038169dac4b8b16108899829fa, type: 2}
   - {fileID: 11400000, guid: 2cdfa878730c41b46bb5e6a4183e15ef, type: 2}
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: d1c83c2155ccb4947b824648e070b1e0, type: 2}
+    requiredLevel: 0
