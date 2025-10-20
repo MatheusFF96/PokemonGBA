@@ -28,11 +28,9 @@ MonoBehaviour:
   growthRate: 1
   catchRate: 120
   learnableMoves:
-  - moveBase: {fileID: 0}
-    level: 0
-  - moveBase: {fileID: 0}
-    level: 0
-  - moveBase: {fileID: 0}
-    level: 0
-  - moveBase: {fileID: 0}
-    level: 0
+  - moveBase: {fileID: 11400000, guid: a940cfba1aa30d04d920083cfdb0d206, type: 2}
+    level: 1
+  learnableByItems: []
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: b3bdba61f5c0d8e45a426f51736dbd87, type: 2}
+    requiredLevel: 10

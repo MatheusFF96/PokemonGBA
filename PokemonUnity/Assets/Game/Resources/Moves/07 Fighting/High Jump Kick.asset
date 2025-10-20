@@ -15,7 +15,7 @@ MonoBehaviour:
   name: High Jump Kick
   description: 
   type: 7
-  power: 130
+  power: 85
   accuracy: 90
   alwaysHits: 0
   pp: 10

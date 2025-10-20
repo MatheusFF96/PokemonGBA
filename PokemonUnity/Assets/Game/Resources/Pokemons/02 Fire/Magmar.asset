@@ -31,33 +31,17 @@ MonoBehaviour:
   - moveBase: {fileID: 11400000, guid: 1af7d56fa329b66429e4f9b9e1c751ba, type: 2}
     level: 1
   - moveBase: {fileID: 11400000, guid: 8922f75dde3643743bde066fd236feca, type: 2}
-    level: 1
-  - moveBase: {fileID: 11400000, guid: 873fde597fb70154c9c3858ef643b511, type: 2}
-    level: 1
-  - moveBase: {fileID: 11400000, guid: 4c56a2edcab7680418ef7d998e34475e, type: 2}
-    level: 1
-  - moveBase: {fileID: 11400000, guid: 0d4dad3cd2c30294fbd42524b5effbeb, type: 2}
-    level: 12
-  - moveBase: {fileID: 11400000, guid: b894870bee6d17243937e6412a94673e, type: 2}
-    level: 16
+    level: 36
   - moveBase: {fileID: 11400000, guid: ec497446397417c429896c1f4b5b354a, type: 2}
-    level: 20
-  - moveBase: {fileID: 11400000, guid: 3720285bba872914abcfc6d50bc9cef1, type: 2}
-    level: 24
+    level: 39
   - moveBase: {fileID: 11400000, guid: 94a557909727d8942aae1732011ea568, type: 2}
-    level: 28
-  - moveBase: {fileID: 11400000, guid: e0bb207857e1c8b41adc1a8d16cc47d7, type: 2}
-    level: 34
-  - moveBase: {fileID: 11400000, guid: 51196c67280641e4a9527340346922d9, type: 2}
-    level: 40
-  - moveBase: {fileID: 11400000, guid: 4b1e0bb8ed6d11c4fb82a48e639f92c4, type: 2}
-    level: 46
-  - moveBase: {fileID: 11400000, guid: 6b411fcd39736a64daeae393620ab6a5, type: 2}
+    level: 43
+  - moveBase: {fileID: 11400000, guid: 4c56a2edcab7680418ef7d998e34475e, type: 2}
+    level: 48
+  - moveBase: {fileID: 11400000, guid: 873fde597fb70154c9c3858ef643b511, type: 2}
     level: 52
-  - moveBase: {fileID: 11400000, guid: e429668589c1d8045ae036b4544216fa, type: 2}
-    level: 58
-  - moveBase: {fileID: 11400000, guid: 76944b98e1b3db948b39eb9dcb2a2b57, type: 2}
-    level: 64
+  - moveBase: {fileID: 11400000, guid: 4b1e0bb8ed6d11c4fb82a48e639f92c4, type: 2}
+    level: 55
   learnableByItems:
   - {fileID: 11400000, guid: b767de59c85fca5428e5a0b4ec407bd6, type: 2}
   - {fileID: 11400000, guid: 54698eb8e1d620a42938201e7cd275a0, type: 2}
@@ -82,3 +66,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bf3091a1a5e73bf4fbfbf26d11a7868d, type: 2}
   - {fileID: 11400000, guid: 2cdfa878730c41b46bb5e6a4183e15ef, type: 2}
   - {fileID: 11400000, guid: ff24a3150e746b24da30c6f6407c942f, type: 2}
+  evolutions: []

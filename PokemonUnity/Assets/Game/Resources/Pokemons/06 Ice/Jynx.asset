@@ -28,34 +28,20 @@ MonoBehaviour:
   growthRate: 1
   catchRate: 45
   learnableMoves:
-  - moveBase: {fileID: 11400000, guid: b1da94c88f1648d4085d195c26a8c524, type: 2}
-    level: 1
-  - moveBase: {fileID: 11400000, guid: 2eb0b845c38592446a6507520d11a254, type: 2}
+  - moveBase: {fileID: 11400000, guid: 076c6f61d01013d4ebfbeb3014aedefc, type: 2}
     level: 1
   - moveBase: {fileID: 11400000, guid: 8b9e2862b35599b47b443799a5235188, type: 2}
     level: 1
-  - moveBase: {fileID: 11400000, guid: 3f8994e83eef5c5478706227aca7ebca, type: 2}
-    level: 1
-  - moveBase: {fileID: 11400000, guid: b34d1949eed198f4992634d28c2a9fa4, type: 2}
-    level: 1
-  - moveBase: {fileID: 11400000, guid: 7b931aad6695b3e4b931cb2fff964f1e, type: 2}
-    level: 12
-  - moveBase: {fileID: 11400000, guid: c844e4850b5cd4f48ba5f33a355f90c6, type: 2}
-    level: 16
-  - moveBase: {fileID: 11400000, guid: 09b43e5dc3b3b874583aa60e8082b39c, type: 2}
-    level: 20
-  - moveBase: {fileID: 11400000, guid: c941b33ff1dec45418a502a6c31b07bc, type: 2}
-    level: 24
+  - moveBase: {fileID: 11400000, guid: 2eb0b845c38592446a6507520d11a254, type: 2}
+    level: 18
+  - moveBase: {fileID: 11400000, guid: c0be34864392cd247a3c2d37227bb7ae, type: 2}
+    level: 23
   - moveBase: {fileID: 11400000, guid: 0588a5de9c42477499364c1f30b7d912, type: 2}
-    level: 28
-  - moveBase: {fileID: 11400000, guid: 5af9d8053d7680f41b2a94b656c1f152, type: 2}
-    level: 34
-  - moveBase: {fileID: 11400000, guid: 076c6f61d01013d4ebfbeb3014aedefc, type: 2}
-    level: 40
-  - moveBase: {fileID: 11400000, guid: 3aad8e7d1187bca47a0f62148a852748, type: 2}
-    level: 46
-  - moveBase: {fileID: 11400000, guid: 8db831a9efb46c543a9e253ee184f7d5, type: 2}
-    level: 52
+    level: 31
+  - moveBase: {fileID: 11400000, guid: 2b86811526756f4458b115576697fabb, type: 2}
+    level: 39
+  - moveBase: {fileID: 11400000, guid: b318b6384360ee047a8d01783e48d81c, type: 2}
+    level: 47
   - moveBase: {fileID: 11400000, guid: ce01fdaf46ef2664d8ed9c85d630ab0d, type: 2}
     level: 58
   learnableByItems:
@@ -85,3 +71,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c9a489038169dac4b8b16108899829fa, type: 2}
   - {fileID: 11400000, guid: bf3091a1a5e73bf4fbfbf26d11a7868d, type: 2}
   - {fileID: 11400000, guid: 2cdfa878730c41b46bb5e6a4183e15ef, type: 2}
+  evolutions: []

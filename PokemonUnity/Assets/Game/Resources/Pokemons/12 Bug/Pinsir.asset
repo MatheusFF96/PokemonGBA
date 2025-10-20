@@ -28,36 +28,20 @@ MonoBehaviour:
   growthRate: 3
   catchRate: 255
   learnableMoves:
-  - moveBase: {fileID: 11400000, guid: a940cfba1aa30d04d920083cfdb0d206, type: 2}
-    level: 1
   - moveBase: {fileID: 11400000, guid: 7c7c0f6b81412434e8a61f9df806d57d, type: 2}
     level: 1
-  - moveBase: {fileID: 11400000, guid: 68e15a9243e233840a2ffa6c20e1f44c, type: 2}
-    level: 4
-  - moveBase: {fileID: 11400000, guid: 3e2fee7f03cc3dd4890b397d82fe452c, type: 2}
-    level: 8
   - moveBase: {fileID: 11400000, guid: 9a9fdea5993c7c84e9f18bb067dbd1cd, type: 2}
-    level: 12
-  - moveBase: {fileID: 11400000, guid: 7cf053b962fa2704d86e8f8af3a7c809, type: 2}
-    level: 16
-  - moveBase: {fileID: 11400000, guid: 5bc75e2bde07c0a4b93fde8742aed2a8, type: 2}
-    level: 20
-  - moveBase: {fileID: 11400000, guid: a2b2447fff89f8145942d94bcb23dbdc, type: 2}
-    level: 24
-  - moveBase: {fileID: 11400000, guid: 01da6c6a5c43df048bf228d91b927fda, type: 2}
-    level: 28
-  - moveBase: {fileID: 11400000, guid: 3ef72c80eb79fb74aa6c185e68aaca60, type: 2}
-    level: 32
-  - moveBase: {fileID: 11400000, guid: ff24a3150e746b24da30c6f6407c942f, type: 2}
-    level: 36
-  - moveBase: {fileID: 11400000, guid: 0a4b26451b104cb4082f670b5355a9a2, type: 2}
-    level: 40
-  - moveBase: {fileID: 11400000, guid: 88e7fac0968efd6419a4de59159cebf6, type: 2}
-    level: 44
+    level: 25
   - moveBase: {fileID: 11400000, guid: 793fbb33525b7fd479423b02b7574924, type: 2}
-    level: 48
-  - moveBase: {fileID: 11400000, guid: 3960655f05380fd4db42d9d318ada4a5, type: 2}
-    level: 52
+    level: 30
+  - moveBase: {fileID: 11400000, guid: 68e15a9243e233840a2ffa6c20e1f44c, type: 2}
+    level: 36
+  - moveBase: {fileID: 11400000, guid: a940cfba1aa30d04d920083cfdb0d206, type: 2}
+    level: 43
+  - moveBase: {fileID: 11400000, guid: 83ef6b0d8df49fd4b8dd09d8bb220fae, type: 2}
+    level: 49
+  - moveBase: {fileID: 11400000, guid: 0a4b26451b104cb4082f670b5355a9a2, type: 2}
+    level: 54
   learnableByItems:
   - {fileID: 11400000, guid: 0a4b26451b104cb4082f670b5355a9a2, type: 2}
   - {fileID: 11400000, guid: 7397eae38abcb5d48aabfa2010a3f843, type: 2}
@@ -75,3 +59,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2cdfa878730c41b46bb5e6a4183e15ef, type: 2}
   - {fileID: 11400000, guid: 06b8541afb6e3da479dfae2a24b9328c, type: 2}
   - {fileID: 11400000, guid: ff24a3150e746b24da30c6f6407c942f, type: 2}
+  evolutions: []

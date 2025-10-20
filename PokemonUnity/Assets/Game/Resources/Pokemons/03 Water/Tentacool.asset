@@ -28,24 +28,24 @@ MonoBehaviour:
   growthRate: 3
   catchRate: 190
   learnableMoves:
-  - moveBase: {fileID: 11400000, guid: 529ea5b6468a54c43b22bd5c023fbfbb, type: 2}
-    level: 1
-  - moveBase: {fileID: 11400000, guid: cfe02f6d45f13bd42aa99a7b5e57ab20, type: 2}
-    level: 1
   - moveBase: {fileID: 11400000, guid: 7c07457f6baa5f94691d48c80588ea3c, type: 2}
-    level: 4
-  - moveBase: {fileID: 11400000, guid: d4fd0f518a0935c4a9acf658c7d08c56, type: 2}
-    level: 8
+    level: 1
   - moveBase: {fileID: 11400000, guid: 42fd88024bdf87142912d3663a1bbd7b, type: 2}
-    level: 12
-  - moveBase: {fileID: 11400000, guid: bcca8a8b838389849be09219fe80a8b4, type: 2}
-    level: 16
+    level: 7
+  - moveBase: {fileID: 11400000, guid: d4fd0f518a0935c4a9acf658c7d08c56, type: 2}
+    level: 13
+  - moveBase: {fileID: 11400000, guid: 97a2b42d33d63794e95745a3105ea0c5, type: 2}
+    level: 18
+  - moveBase: {fileID: 11400000, guid: cfe02f6d45f13bd42aa99a7b5e57ab20, type: 2}
+    level: 22
+  - moveBase: {fileID: 11400000, guid: 17db613663dfc124ba2496b14ed90d0e, type: 2}
+    level: 27
+  - moveBase: {fileID: 11400000, guid: 7cd9a5f4cf4dbe04eadd4894bcd0e3fb, type: 2}
+    level: 33
   - moveBase: {fileID: 11400000, guid: 9aac6d42721ea7c4fb192072f577791c, type: 2}
-    level: 20
-  - moveBase: {fileID: 11400000, guid: 6b84475f576e19a499b58fbda1f8f328, type: 2}
-    level: 24
-  - moveBase: {fileID: 11400000, guid: ce7fc1eac812c924b833943bcec048d4, type: 2}
-    level: 28
+    level: 40
+  - moveBase: {fileID: 11400000, guid: 622d71c106d21734cac11645c007b1a6, type: 2}
+    level: 48
   learnableByItems:
   - {fileID: 11400000, guid: 0a4b26451b104cb4082f670b5355a9a2, type: 2}
   - {fileID: 11400000, guid: 7397eae38abcb5d48aabfa2010a3f843, type: 2}
@@ -66,3 +66,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2cdfa878730c41b46bb5e6a4183e15ef, type: 2}
   - {fileID: 11400000, guid: 06b8541afb6e3da479dfae2a24b9328c, type: 2}
   - {fileID: 11400000, guid: 80f2812c8e67bf54c87b4421d4e78399, type: 2}
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: 38ac1237ced896d4fb285b4dfc574473, type: 2}
+    requiredLevel: 30

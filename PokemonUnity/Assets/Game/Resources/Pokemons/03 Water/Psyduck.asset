@@ -31,27 +31,15 @@ MonoBehaviour:
   - moveBase: {fileID: 11400000, guid: 7f82fffb4607e2d4488ad049d1e03d36, type: 2}
     level: 1
   - moveBase: {fileID: 11400000, guid: e5ca16ccfc077d2479b182d7a8185844, type: 2}
-    level: 1
-  - moveBase: {fileID: 11400000, guid: cfe02f6d45f13bd42aa99a7b5e57ab20, type: 2}
-    level: 3
-  - moveBase: {fileID: 11400000, guid: 7b931aad6695b3e4b931cb2fff964f1e, type: 2}
-    level: 6
-  - moveBase: {fileID: 11400000, guid: c965e12848422a34599d52804df3a787, type: 2}
-    level: 9
-  - moveBase: {fileID: 11400000, guid: bcca8a8b838389849be09219fe80a8b4, type: 2}
-    level: 12
+    level: 28
   - moveBase: {fileID: 11400000, guid: f1ccfa586ce16e246a38880b9b9b86cc, type: 2}
-    level: 15
-  - moveBase: {fileID: 11400000, guid: ec130962fe5fe1f4e8a6257991582388, type: 2}
-    level: 18
-  - moveBase: {fileID: 11400000, guid: 9aac6d42721ea7c4fb192072f577791c, type: 2}
-    level: 21
-  - moveBase: {fileID: 11400000, guid: 79c9a3122a3df1644b6a9492e1e9d96b, type: 2}
-    level: 24
-  - moveBase: {fileID: 11400000, guid: 326c42dbb4e12fc438654228d8f0d610, type: 2}
-    level: 27
-  - moveBase: {fileID: 11400000, guid: 7477c0987accf4b4d9bbfb186be26822, type: 2}
-    level: 30
+    level: 31
+  - moveBase: {fileID: 11400000, guid: 7b931aad6695b3e4b931cb2fff964f1e, type: 2}
+    level: 36
+  - moveBase: {fileID: 11400000, guid: c965e12848422a34599d52804df3a787, type: 2}
+    level: 43
+  - moveBase: {fileID: 11400000, guid: 622d71c106d21734cac11645c007b1a6, type: 2}
+    level: 52
   learnableByItems:
   - {fileID: 11400000, guid: b767de59c85fca5428e5a0b4ec407bd6, type: 2}
   - {fileID: 11400000, guid: 54698eb8e1d620a42938201e7cd275a0, type: 2}
@@ -78,3 +66,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c9a489038169dac4b8b16108899829fa, type: 2}
   - {fileID: 11400000, guid: 80f2812c8e67bf54c87b4421d4e78399, type: 2}
   - {fileID: 11400000, guid: ff24a3150e746b24da30c6f6407c942f, type: 2}
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: a4000e3c20855524295fb1d2d0dd4e3d, type: 2}
+    requiredLevel: 33
