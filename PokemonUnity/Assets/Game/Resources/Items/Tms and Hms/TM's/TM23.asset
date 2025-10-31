@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: TM23
   description: Ensina Dragon Rage a um Pokemon.
-  icon: {fileID: -1738809681, guid: 3ae12697ae504414bbf0797ea36dfddd, type: 3}
+  icon: {fileID: 21300000, guid: 3513e5d6537cacb4a9996bb0f0c70914, type: 3}
+  price: 3300
+  isSellable: 1
   move: {fileID: 11400000, guid: 9cd26cd94881b9a49a39e8d22eceaad5, type: 2}
   isHM: 0

@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Ice Heal
   description: Cura um Pokemon com congelamento.
-  icon: {fileID: -272327469, guid: bfe65fd55688b674c87010e3985f447f, type: 3}
+  icon: {fileID: 21300000, guid: e51b3fc00cd732145bb73bcf62ef70e7, type: 3}
+  price: 250
+  isSellable: 1
   hpAmount: 0
   restoreMaxHP: 0
   ppAmount: 0

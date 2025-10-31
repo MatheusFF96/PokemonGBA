@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Max Ether
   description: Recupera o PP de um Pokemon completamente.
-  icon: {fileID: -651202940, guid: bfe65fd55688b674c87010e3985f447f, type: 3}
+  icon: {fileID: 21300000, guid: 1735e3ba82caed941ad1d7cdef0a17f9, type: 3}
+  price: 0
+  isSellable: 0
   hpAmount: 0
   restoreMaxHP: 0
   ppAmount: 0

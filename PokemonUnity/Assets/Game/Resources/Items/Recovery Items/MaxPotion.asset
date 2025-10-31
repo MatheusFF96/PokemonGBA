@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Max Potion
   description: Recupera a vida de um Pokemon completamente.
-  icon: {fileID: -1747156852, guid: bfe65fd55688b674c87010e3985f447f, type: 3}
+  icon: {fileID: 21300000, guid: 2cb3575bcf4d2dd42ba87cac07055f29, type: 3}
+  price: 2500
+  isSellable: 1
   hpAmount: 0
   restoreMaxHP: 1
   ppAmount: 0

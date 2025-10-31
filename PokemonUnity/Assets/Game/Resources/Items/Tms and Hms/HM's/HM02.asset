@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: HM02
   description: Ensina Fly para um pokemon.
-  icon: {fileID: -1738809681, guid: 3ae12697ae504414bbf0797ea36dfddd, type: 3}
+  icon: {fileID: 21300000, guid: 19e47fcdbc2b1174eb95a47535e8a38f, type: 3}
+  price: 0
+  isSellable: 0
   move: {fileID: 11400000, guid: 7267ed68fd0fd774592e39036a9da1e8, type: 2}
   isHM: 1

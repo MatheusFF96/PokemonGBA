@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 7579750712166820923}
   - component: {fileID: 5018126545477261556}
   - component: {fileID: 1541922934230458069}
+  - component: {fileID: 7911251180178408295}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -363,39 +364,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slots:
-  - item: {fileID: 11400000, guid: 9e6ac4c745c0bc743913dfaf5af352ce, type: 2}
+  - item: {fileID: 11400000, guid: 02edee21afde3fd4e82df8f87e60d090, type: 2}
     count: 5
-  - item: {fileID: 11400000, guid: facbd17250a3f8741992087178a2179b, type: 2}
-    count: 2
-  - item: {fileID: 11400000, guid: dd8a49d08a6c4084c88064faff1cbd06, type: 2}
-    count: 1
-  - item: {fileID: 11400000, guid: 11a67f45e0ab406419902a1621114d25, type: 2}
-    count: 2
-  - item: {fileID: 11400000, guid: ee6c372209d47c64c808135b2568f921, type: 2}
-    count: 2
-  - item: {fileID: 11400000, guid: 02456129be254534db99298f698f44d7, type: 2}
+  - item: {fileID: 11400000, guid: 77ae693814bdaa14ab707731b8e98c3d, type: 2}
     count: 4
-  - item: {fileID: 11400000, guid: ee6c372209d47c64c808135b2568f921, type: 2}
+  - item: {fileID: 11400000, guid: 87a21ea6641694744be8f56058ad7605, type: 2}
+    count: 3
+  - item: {fileID: 11400000, guid: e8ef20e40c3d3f44fa0c1daeed5bf92a, type: 2}
+    count: 2
+  - item: {fileID: 11400000, guid: f246bb38ee438704d8d7b51380848f5e, type: 2}
     count: 1
   - item: {fileID: 11400000, guid: 11a67f45e0ab406419902a1621114d25, type: 2}
-    count: 1
+    count: 15
+  - item: {fileID: 11400000, guid: ee6c372209d47c64c808135b2568f921, type: 2}
+    count: 14
+  - item: {fileID: 11400000, guid: d54a139087137ed4ea4508bcb3c32129, type: 2}
+    count: 13
+  - item: {fileID: 11400000, guid: 02456129be254534db99298f698f44d7, type: 2}
+    count: 12
+  - item: {fileID: 11400000, guid: 934d7ee74d431a341ab27f331b90b8c2, type: 2}
+    count: 11
+  - item: {fileID: 11400000, guid: 1761e0a1aa397004e928d2f50995ff1f, type: 2}
+    count: 10
+  - item: {fileID: 11400000, guid: db082c54fca4ac2488bbc06e5d37a3ab, type: 2}
+    count: 9
+  - item: {fileID: 11400000, guid: 881f324c89d6d2d46b86ea5303e83f2d, type: 2}
+    count: 8
   - item: {fileID: 11400000, guid: 0cd569dc103364c4bb881ae046d35266, type: 2}
+    count: 7
+  - item: {fileID: 11400000, guid: dd8a49d08a6c4084c88064faff1cbd06, type: 2}
+    count: 6
+  - item: {fileID: 11400000, guid: d059b5088dce7e644bfa1ae3a61514ba, type: 2}
+    count: 5
+  - item: {fileID: 11400000, guid: 0ae79e55b78aca742a42a23e412ec2d0, type: 2}
+    count: 4
+  - item: {fileID: 11400000, guid: 9e6ac4c745c0bc743913dfaf5af352ce, type: 2}
+    count: 3
+  - item: {fileID: 11400000, guid: d19c14fe044af464bad8238add7f1f38, type: 2}
+    count: 2
+  - item: {fileID: 11400000, guid: facbd17250a3f8741992087178a2179b, type: 2}
     count: 1
   pokeballSlots:
   - item: {fileID: 11400000, guid: 1930d52690d5f0141bdfe1914d00e8b5, type: 2}
     count: 8
   - item: {fileID: 11400000, guid: 7916f66713b63fa46bc5d376dead553f, type: 2}
     count: 7
-  - item: {fileID: 11400000, guid: b69cc15aac1ce2b48adf0c4db2988fb0, type: 2}
-    count: 6
-  - item: {fileID: 11400000, guid: bf26392e763763848968fdea47d07c30, type: 2}
-    count: 5
-  - item: {fileID: 11400000, guid: 08131100bf2fb30459a747bb048ce498, type: 2}
-    count: 4
-  - item: {fileID: 11400000, guid: c30fad69a074f774fb4bfbea9ce2229a, type: 2}
-    count: 3
   - item: {fileID: 11400000, guid: d2db1437d477be64d86d901fc7598322, type: 2}
     count: 2
+  - item: {fileID: 11400000, guid: c30fad69a074f774fb4bfbea9ce2229a, type: 2}
+    count: 3
   - item: {fileID: 11400000, guid: 4b9f21189aa11d9438229cdaaf6ecf0e, type: 2}
     count: 1
   tmSlots:
@@ -519,3 +536,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f0b4db8dff478542b39515692d9b1b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7911251180178408295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8634749673693591754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f080c2129926754f95fbec9d2eec565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 1000

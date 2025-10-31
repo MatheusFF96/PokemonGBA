@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: HM01
   description: Ensina Cut para um pokemon.
-  icon: {fileID: -1738809681, guid: 3ae12697ae504414bbf0797ea36dfddd, type: 3}
+  icon: {fileID: 21300000, guid: 47df1ba9e66550f439b6d5cbc2b6e3d8, type: 3}
+  price: 0
+  isSellable: 0
   move: {fileID: 11400000, guid: 06b8541afb6e3da479dfae2a24b9328c, type: 2}
   isHM: 1
