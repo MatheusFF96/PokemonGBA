@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: TM12
   description: Ensina Water Gun a um Pokemon.
-  icon: {fileID: -1738809681, guid: 3ae12697ae504414bbf0797ea36dfddd, type: 3}
+  icon: {fileID: 21300000, guid: 8139f51b6d357c94e811501c5972b257, type: 3}
+  price: 1000
+  isSellable: 1
   move: {fileID: 11400000, guid: cfe02f6d45f13bd42aa99a7b5e57ab20, type: 2}
   isHM: 0

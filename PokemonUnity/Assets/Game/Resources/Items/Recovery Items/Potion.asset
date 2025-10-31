@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Potion
   description: Recupera a vida de um Pokemon em 20 pontos.
-  icon: {fileID: -1860228508, guid: bfe65fd55688b674c87010e3985f447f, type: 3}
+  icon: {fileID: 21300000, guid: 55ce43020d5d6924f80e9e0f31bd0f6f, type: 3}
+  price: 300
+  isSellable: 1
   hpAmount: 20
   restoreMaxHP: 0
   ppAmount: 0

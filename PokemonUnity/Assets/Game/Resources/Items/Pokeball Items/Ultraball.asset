@@ -15,4 +15,6 @@ MonoBehaviour:
   name: Ultra Ball
   description: Uma pokeball com 2x de chances de capturar um pokemon.
   icon: {fileID: -2598005947579844795, guid: f64ca9a0e50d2214aa7054deb58e16bc, type: 3}
+  price: 1200
+  isSellable: 1
   catchRateModifier: 2

@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0767e23b3b6cb554b8a41fda810750f8, type: 3}
   m_Name: ParalyzeHeal
   m_EditorClassIdentifier: 
-  name: ParalyzeHeal
+  name: Paralyze Heal
   description: Cura um Pokemon com paralizia.
-  icon: {fileID: -1601480106, guid: bfe65fd55688b674c87010e3985f447f, type: 3}
+  icon: {fileID: 21300000, guid: 555ad8f1b9cbd364683c6eb684672164, type: 3}
+  price: 200
+  isSellable: 1
   hpAmount: 0
   restoreMaxHP: 0
   ppAmount: 0

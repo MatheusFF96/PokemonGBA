@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: TM40
   description: Ensina Skull Bash a um Pokemon.
-  icon: {fileID: -1738809681, guid: 3ae12697ae504414bbf0797ea36dfddd, type: 3}
+  icon: {fileID: 21300000, guid: 47df1ba9e66550f439b6d5cbc2b6e3d8, type: 3}
+  price: 2000
+  isSellable: 1
   move: {fileID: 11400000, guid: b93e45a378a864948b733f497b41ec3f, type: 2}
   isHM: 0

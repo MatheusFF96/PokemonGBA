@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: TM42
   description: Ensina Dream Eater a um Pokemon.
-  icon: {fileID: -1738809681, guid: 3ae12697ae504414bbf0797ea36dfddd, type: 3}
+  icon: {fileID: 21300000, guid: 05014b3e2f12b4f4e94e8218198a4cfe, type: 3}
+  price: 2000
+  isSellable: 1
   move: {fileID: 11400000, guid: e1e7d5a129f10d443bcf1e5882746c01, type: 2}
   isHM: 0

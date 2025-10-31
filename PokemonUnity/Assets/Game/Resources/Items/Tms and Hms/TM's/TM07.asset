@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: TM07
   description: Ensina Horn Drill a um Pokemon.
-  icon: {fileID: -1738809681, guid: 3ae12697ae504414bbf0797ea36dfddd, type: 3}
+  icon: {fileID: 21300000, guid: 47df1ba9e66550f439b6d5cbc2b6e3d8, type: 3}
+  price: 2000
+  isSellable: 1
   move: {fileID: 11400000, guid: 84d7f62d650932f45a1595837a31edcd, type: 2}
   isHM: 0

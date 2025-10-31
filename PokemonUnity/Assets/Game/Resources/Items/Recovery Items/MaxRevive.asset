@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Max Revive
   description: Revive um Pokemon desmaiado com vida completa.
-  icon: {fileID: 1095864882, guid: bfe65fd55688b674c87010e3985f447f, type: 3}
+  icon: {fileID: 21300000, guid: c53c6ea8dd87ba44790cc25b47464b5f, type: 3}
+  price: 4000
+  isSellable: 1
   hpAmount: 0
   restoreMaxHP: 0
   ppAmount: 0

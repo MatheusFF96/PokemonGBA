@@ -54,4 +54,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b93e45a378a864948b733f497b41ec3f, type: 2}
   - {fileID: 11400000, guid: c9a489038169dac4b8b16108899829fa, type: 2}
   - {fileID: 11400000, guid: 2cdfa878730c41b46bb5e6a4183e15ef, type: 2}
-  evolutions: []
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: f3db473291264a54f81d8e2d3820aaae, type: 2}
+    requiredLevel: 0
+    requiredItem: {fileID: 11400000, guid: 02edee21afde3fd4e82df8f87e60d090, type: 2}
+  - evolvesInto: {fileID: 11400000, guid: 6d0dc7ffce7b8344fab5b7d17b09fbf6, type: 2}
+    requiredLevel: 0
+    requiredItem: {fileID: 11400000, guid: e8ef20e40c3d3f44fa0c1daeed5bf92a, type: 2}
+  - evolvesInto: {fileID: 11400000, guid: 9146afe97ad4b734194336a3cce52233, type: 2}
+    requiredLevel: 0
+    requiredItem: {fileID: 11400000, guid: 77ae693814bdaa14ab707731b8e98c3d, type: 2}

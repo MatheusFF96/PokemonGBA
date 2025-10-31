@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { FreeRoam, Battle, Dialog, Menu, PartyScreen, Bag, Cutscene, Paused, Evolution }
+public enum GameState { FreeRoam, Battle, Dialog, Menu, PartyScreen, Bag, Cutscene, Paused, Evolution, Shop }
 
 public class GameController : MonoBehaviour
 {
@@ -77,6 +77,9 @@ public class GameController : MonoBehaviour
             partyScreen.SetPartyData();
             state = stateBeforeEvolution;
         };
+
+        ShopController.i.OnStart += () => state = GameState.Shop;
+        ShopController.i.OnFinish += () => state = GameState.FreeRoam;
     }
 
     public void PauseGame(bool pause)
@@ -194,7 +197,10 @@ public class GameController : MonoBehaviour
 
             inventoryUI.HandleUpdate(onBack);
         }
-
+        else if (state == GameState.Shop)
+        {
+            ShopController.i.HandleUpdate();
+        }
     }
 
     public void SetCurrentScene(SceneDetails currScene)
@@ -229,6 +235,18 @@ public class GameController : MonoBehaviour
             SavingSystem.i.Load("saveSlot1");
             state = GameState.FreeRoam;
         }        
+    }
+
+    public IEnumerator MoveCamera(Vector2 moveOffset, bool waitForFadeOut=false)
+    {
+        yield return Fader.i.FadeIn(0.5f);
+
+        worldCamera.transform.position += new Vector3(moveOffset.x, moveOffset.y);
+
+        if (waitForFadeOut)
+            yield return Fader.i.FadeOut(0.5f);
+        else
+            StartCoroutine(Fader.i.FadeOut(0.5f));
     }
 
     public GameState State => state;

@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Super Potion
   description: Recupera a vida de um Pokemon em 50 pontos.
-  icon: {fileID: 1473617459, guid: bfe65fd55688b674c87010e3985f447f, type: 3}
+  icon: {fileID: 21300000, guid: 9327a82c43fdb81409131d72eeda6af1, type: 3}
+  price: 700
+  isSellable: 1
   hpAmount: 50
   restoreMaxHP: 0
   ppAmount: 0

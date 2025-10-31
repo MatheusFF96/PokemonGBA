@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Ether
   description: Recupera o PP de uma habilidade do Pokemon em 10 pontos.
-  icon: {fileID: -777161244, guid: bfe65fd55688b674c87010e3985f447f, type: 3}
+  icon: {fileID: 21300000, guid: 126f833b8775d544d9f228dafd79f91a, type: 3}
+  price: 0
+  isSellable: 0
   hpAmount: 0
   restoreMaxHP: 0
   ppAmount: 10

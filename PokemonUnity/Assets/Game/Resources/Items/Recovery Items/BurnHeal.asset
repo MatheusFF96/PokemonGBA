@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Burn Heal
   description: Cura um Pokemon com queimadura.
-  icon: {fileID: -1437418341, guid: bfe65fd55688b674c87010e3985f447f, type: 3}
+  icon: {fileID: 21300000, guid: 6f0337b3b272c754787d74c428fa491c, type: 3}
+  price: 250
+  isSellable: 1
   hpAmount: 0
   restoreMaxHP: 0
   ppAmount: 0
