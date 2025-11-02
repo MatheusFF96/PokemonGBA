@@ -32,3 +32,4 @@ MonoBehaviour:
     chance: 30
     target: 0
   target: 0
+  sound: {fileID: 8300000, guid: 5b7d64f64cfbf82468e775212037a10f, type: 3}

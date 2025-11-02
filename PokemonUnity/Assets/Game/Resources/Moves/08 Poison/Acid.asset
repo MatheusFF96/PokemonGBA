@@ -19,6 +19,7 @@ MonoBehaviour:
   accuracy: 100
   alwaysHits: 0
   pp: 30
+  priority: 0
   category: 1
   effects:
     boosts: []
@@ -33,3 +34,4 @@ MonoBehaviour:
     chance: 10
     target: 0
   target: 0
+  sound: {fileID: 8300000, guid: 73b63a773dec1b8408b44f110689a581, type: 3}

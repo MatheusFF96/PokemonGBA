@@ -21,6 +21,11 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] MoveSelectionUI moveSelectionUI;
     [SerializeField] InventoryUI inventoryUI;
 
+    [Header("Audio")]
+    [SerializeField] AudioClip wildBattleMusic;
+    [SerializeField] AudioClip trainerBattleMusic;
+    [SerializeField] AudioClip battleVictoryMusic;
+
     public event Action<bool> OnBattleOver;
 
     BattleState state;
@@ -47,6 +52,8 @@ public class BattleSystem : MonoBehaviour
         player = playerParty.GetComponent<PlayerController>();
         isTrainerBattle = false;
 
+        AudioManager.i.PlayMusic(wildBattleMusic);
+
         StartCoroutine(SetupBattle());
     }
 
@@ -58,6 +65,8 @@ public class BattleSystem : MonoBehaviour
         isTrainerBattle = true;
         player = playerParty.GetComponent<PlayerController>();
         trainer = trainerParty.GetComponent<TrainerController>();
+
+        AudioManager.i.PlayMusic(trainerBattleMusic);
 
         StartCoroutine(SetupBattle());
     }
@@ -252,8 +261,12 @@ public class BattleSystem : MonoBehaviour
         if (CheckIfMoveHits(move, sourceUnit.Pokemon, targetUnit.Pokemon))
         {
             sourceUnit.PlayAttackAnimation();
+            AudioManager.i.PlaySfx(move.Base.Sound);
+
             yield return new WaitForSeconds(1f);
+
             targetUnit.PlayHitAnimation();
+            AudioManager.i.PlaySfx(AudioId.Hit);
 
             if (move.Base.Category == MoveCategory.Status)
             {
@@ -372,6 +385,13 @@ public class BattleSystem : MonoBehaviour
 
         if (!faintedUnit.IsPlayerUnit)
         {
+            bool battleWon = true;
+            if (isTrainerBattle)
+                battleWon = trainerParty.GetHealthyPokemon() == null;
+
+            if (battleWon)
+                AudioManager.i.PlayMusic(battleVictoryMusic);
+
             // Exp Gain
             int expYield = faintedUnit.Pokemon.Base.ExpYield;
             int enemeLevel = faintedUnit.Pokemon.Level;

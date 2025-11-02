@@ -7889,6 +7889,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MeetProfessorQuestObject
       objectReference: {fileID: 0}
+    - target: {fileID: 7606092480575149457, guid: 93f1faa63fdbddc43b064d7c5ef6c693, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
