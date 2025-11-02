@@ -317,6 +317,7 @@ MonoBehaviour:
     - Eu vou treinar pesado e te derrotar algum dia!
   exclamation: {fileID: 3797325599927907508}
   fov: {fileID: 7080197281359842742}
+  trainerAppearsClip: {fileID: 8300000, guid: fb0b061183f8fca46848fcbc58ef4aa8, type: 3}
 --- !u!114 &2732951603639617655
 MonoBehaviour:
   m_ObjectHideFlags: 0

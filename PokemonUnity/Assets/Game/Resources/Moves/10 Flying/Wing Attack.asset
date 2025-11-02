@@ -17,4 +17,14 @@ MonoBehaviour:
   type: 10
   power: 60
   accuracy: 100
+  alwaysHits: 0
   pp: 35
+  priority: 0
+  category: 0
+  effects:
+    boosts: []
+    status: 0
+    volatileStatus: 0
+  secondaries: []
+  target: 0
+  sound: {fileID: 8300000, guid: f21d15ba614e56a4ca83152d0d7b608c, type: 3}

@@ -31,3 +31,4 @@ MonoBehaviour:
     volatileStatus: 0
   secondaries: []
   target: 1
+  sound: {fileID: 8300000, guid: a7028cdebf70b9d4da16a95cbcd6bc09, type: 3}
