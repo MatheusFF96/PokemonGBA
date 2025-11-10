@@ -9,6 +9,8 @@ using UnityEngine.UI;
 public enum BattleState { Start, ActionSelection, MoveSelection, RunningTurn, Busy, Bag, PartyScreen, AboutToUse, MoveToForget, BattleOver }
 public enum BattleAction { Move, SwitchPokemon, UseItem, Run }
 
+public enum BattleTrigger { LongGrass, Water }
+
 public class BattleSystem : MonoBehaviour
 {
     [SerializeField] BattleUnit playerUnit;
@@ -26,9 +28,15 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] AudioClip trainerBattleMusic;
     [SerializeField] AudioClip battleVictoryMusic;
 
+    [Header("Background Images")]
+    [SerializeField] Image backgroundImage;
+    [SerializeField] Sprite grassBackground;
+    [SerializeField] Sprite waterBackground;
+
     public event Action<bool> OnBattleOver;
 
     BattleState state;
+
     int currentAction;
     int currentMove;
     bool aboutToUseChoice = true;
@@ -44,20 +52,26 @@ public class BattleSystem : MonoBehaviour
     int escapeAttempts;
     MoveBase moveToLearn;
 
+    BattleTrigger battleTrigger;
 
-    public void StartBattle(PokemonParty playerParty, Pokemon wildPokemon)
+
+    public void StartBattle(PokemonParty playerParty, Pokemon wildPokemon,
+        BattleTrigger trigger = BattleTrigger.LongGrass)
     {
         this.playerParty = playerParty;
         this.wildPokemon = wildPokemon;
         player = playerParty.GetComponent<PlayerController>();
         isTrainerBattle = false;
 
+        battleTrigger = trigger;
+
         AudioManager.i.PlayMusic(wildBattleMusic);
 
         StartCoroutine(SetupBattle());
     }
 
-    public void StartTrainerBattle(PokemonParty playerParty, PokemonParty trainerParty)
+    public void StartTrainerBattle(PokemonParty playerParty, PokemonParty trainerParty,
+        BattleTrigger trigger = BattleTrigger.LongGrass)
     {
         this.playerParty = playerParty;
         this.trainerParty = trainerParty;
@@ -65,6 +79,8 @@ public class BattleSystem : MonoBehaviour
         isTrainerBattle = true;
         player = playerParty.GetComponent<PlayerController>();
         trainer = trainerParty.GetComponent<TrainerController>();
+
+        battleTrigger = trigger;
 
         AudioManager.i.PlayMusic(trainerBattleMusic);
 
@@ -75,6 +91,8 @@ public class BattleSystem : MonoBehaviour
     {
         playerUnit.Clear();
         enemyUnit.Clear();
+
+        backgroundImage.sprite = (battleTrigger == BattleTrigger.LongGrass) ? grassBackground : waterBackground;
 
         if (!isTrainerBattle)
         {
