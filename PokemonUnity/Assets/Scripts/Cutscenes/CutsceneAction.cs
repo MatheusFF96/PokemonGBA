@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CutsceneAction : MonoBehaviour
+[System.Serializable]
+public class CutsceneAction
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] string name;
+    [SerializeField] bool waitForCompletion = true;
+
+    public virtual IEnumerator Play()
     {
-        
+        yield break;
     }
 
-    // Update is called once per frame
-    void Update()
+    public string Name
     {
-        
+        get => name;
+        set => name = value;
     }
+
+    public bool WaitForCompletion => waitForCompletion;
 }
