@@ -1,15 +1,14 @@
 using GDE.GenericSelectionUI;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class MenuController : SelectionUI<TextSlot>
+public class ActionSelectionUI : SelectionUI<TextSlot>
 {
     private void Start()
     {
+        SetSelectionSettings(SelectionType.Grid, 2);
         SetItems(GetComponentsInChildren<TextSlot>().ToList());
     }
 }
