@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 220044720069979951}
   - component: {fileID: 3908460448918737782}
   - component: {fileID: 7282124512859881528}
+  - component: {fileID: 7949828145937724674}
+  - component: {fileID: 5415682747449451689}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -247,6 +249,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partyScreen: {fileID: 5131175035780499531}
+--- !u!114 &7949828145937724674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290752881181667498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bdc7757b32f5594aa9539d6c5d52caf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5415682747449451689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290752881181667498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a61b0f2751312ab41981cc5cfb1d5deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &304376147827431019
 GameObject:
   m_ObjectHideFlags: 0
@@ -2881,6 +2907,7 @@ GameObject:
   - component: {fileID: 2670695544003019132}
   - component: {fileID: 2017242669028135538}
   - component: {fileID: 906919407886643449}
+  - component: {fileID: 4467867836410635785}
   m_Layer: 0
   m_Name: BattleSystem
   m_TagString: Untagged
@@ -2969,6 +2996,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dfc3096d269159141aa479f8c96f1cb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4467867836410635785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7534229539667412441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26c8d152ccaadb04da7e915670cf1abc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7583476592826669694

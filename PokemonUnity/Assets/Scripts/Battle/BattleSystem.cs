@@ -56,7 +56,7 @@ public class BattleSystem : MonoBehaviour
 
     public bool IsTrainerBattle { get; private set; } = false;
     PlayerController player;
-    TrainerController trainer;
+    public TrainerController Trainer { get; private set; }
 
     public int EscapeAttempts { get; set; }
     MoveBase moveToLearn;
@@ -87,7 +87,7 @@ public class BattleSystem : MonoBehaviour
 
         IsTrainerBattle = true;
         player = playerParty.GetComponent<PlayerController>();
-        trainer = trainerParty.GetComponent<TrainerController>();
+        Trainer = trainerParty.GetComponent<TrainerController>();
 
         battleTrigger = trigger;
 
@@ -125,16 +125,16 @@ public class BattleSystem : MonoBehaviour
             playerImage.gameObject.SetActive(true);
             trainerImage.gameObject.SetActive(true);
             playerImage.sprite = player.Sprite;
-            trainerImage.sprite = trainer.Sprite;
+            trainerImage.sprite = Trainer.Sprite;
 
-            yield return dialogBox.TypeDialog($"{trainer.Name} quer uma batalha.");
+            yield return dialogBox.TypeDialog($"{Trainer.Name} quer uma batalha.");
 
             // Send out first pokemon of the trainer
             trainerImage.gameObject.SetActive(false);
             enemyUnit.gameObject.SetActive(true);
             var enemyPokemon = TrainerParty.GetHealthyPokemon();
             enemyUnit.Setup(enemyPokemon);
-            yield return dialogBox.TypeDialog($"{trainer.Name} escolheu {enemyPokemon.Base.Name}!");
+            yield return dialogBox.TypeDialog($"{Trainer.Name} escolheu {enemyPokemon.Base.Name}!");
 
             // Send out first pokemon of the player
             playerImage.gameObject.SetActive(false);
@@ -192,7 +192,7 @@ public class BattleSystem : MonoBehaviour
     IEnumerator AboutToUse(Pokemon newPokemon)
     {
         state = BattleStates.Busy;
-        yield return dialogBox.TypeDialog($"{trainer.Name} está para escolher {newPokemon.Base.Name}. Você quer trocar de pokemon?");
+        yield return dialogBox.TypeDialog($"{Trainer.Name} está para escolher {newPokemon.Base.Name}. Você quer trocar de pokemon?");
 
         state = BattleStates.AboutToUse;
         dialogBox.EnableChoiceBox(true);
@@ -433,13 +433,13 @@ public class BattleSystem : MonoBehaviour
         yield return dialogBox.TypeDialog($"Vá {newPokemon.Base.Name} eu escolho você!");
     }
 
-    IEnumerator SendNextTrainerPokemon()
+    public IEnumerator SendNextTrainerPokemon()
     {
         state = BattleStates.Busy;
 
         var nextPokemon = TrainerParty.GetHealthyPokemon();
         enemyUnit.Setup(nextPokemon);
-        yield return dialogBox.TypeDialog($"{trainer.Name} escolheu {nextPokemon.Base.Name}!");
+        yield return dialogBox.TypeDialog($"{Trainer.Name} escolheu {nextPokemon.Base.Name}!");
 
         state = BattleStates.RunningTurn;
     }
