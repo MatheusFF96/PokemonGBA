@@ -1,14 +1,12 @@
+using GDE.GenericSelectionUI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum InventoryUIState { ItemSelection, PartySelection, MoveToForget, Busy}
-
-public class InventoryUI : MonoBehaviour
+public class InventoryUI : SelectionUI<TextSlot>
 {
     [SerializeField] GameObject itemList;
     [SerializeField] ItemSlotUI itemSlotUI;
@@ -20,17 +18,7 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] Image upArrow;
     [SerializeField] Image downArrow;
 
-    [SerializeField] PartyScreen partyScreen;
-    [SerializeField] MoveSelectionUI moveSelectionUI;
-
-    Action<ItemBase> onItemUsed;
-
-    int selectedItem = 0;
     int selectedCategory = 0;
-
-    MoveBase moveToLearn;
-
-    InventoryUIState state;
 
     const int itemsInViewport = 8;
 
@@ -65,223 +53,40 @@ public class InventoryUI : MonoBehaviour
             slotUIList.Add(slotUIObj);
         }
 
-        UpdateItemSelection();
+        SetItems(slotUIList.Select(s => s.GetComponent<TextSlot>()).ToList());
+
+        UpdateSelectionInUI();
     }
 
-    public void HandleUpdate(Action onBack, Action<ItemBase> onItemUsed=null)
+    public override void HandleUpdate()
     {
-        this.onItemUsed = onItemUsed;
+        int prevCategory = selectedCategory;
 
-        if (state == InventoryUIState.ItemSelection)
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+            ++selectedCategory;
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+            --selectedCategory;
+
+        if (selectedCategory > Inventory.ItemCategories.Count - 1)
+            selectedCategory = 0;
+        else if (selectedCategory < 0)
+            selectedCategory = Inventory.ItemCategories.Count - 1;
+
+        if (prevCategory != selectedCategory)
         {
-            int prevSelection = selectedItem;
-            int prevCategory = selectedCategory;
-
-            if (Input.GetKeyDown(KeyCode.DownArrow))
-                ++selectedItem;
-            else if (Input.GetKeyDown(KeyCode.UpArrow))
-                --selectedItem;
-            else if (Input.GetKeyDown(KeyCode.RightArrow))
-                ++selectedCategory;
-            else if (Input.GetKeyDown(KeyCode.LeftArrow))
-                --selectedCategory;
-
-            if (selectedCategory > Inventory.ItemCategories.Count - 1)
-                selectedCategory = 0;
-            else if (selectedCategory < 0)
-                selectedCategory = Inventory.ItemCategories.Count - 1;
-
-            selectedItem = Mathf.Clamp(selectedItem, 0, inventory.GetSlotsByCategory(selectedCategory).Count - 1);
-
-            if (prevCategory != selectedCategory)
-            {
-                ResetSelection();
-                categoryText.text = Inventory.ItemCategories[selectedCategory];
-                UpdateItemList();
-            }
-            else if (prevSelection != selectedItem)
-            {
-                UpdateItemSelection();
-            }
-
-            if (Input.GetKeyDown(KeyCode.Z))
-                StartCoroutine(ItemSelected());
-            else if (Input.GetKeyDown(KeyCode.X))
-                onBack?.Invoke();
+            ResetSelection();
+            categoryText.text = Inventory.ItemCategories[selectedCategory];
+            UpdateItemList();
         }
-        else if (state == InventoryUIState.PartySelection)
-        {
-            Action onSelected = () =>
-            {
-                StartCoroutine(UseItem());
-            };
 
-            Action onBackPartyScreen = () =>
-            {
-                ClosePartyScreen();
-            };
-
-            partyScreen.HandleUpdate(onSelected, onBackPartyScreen);
-        }
-        else if (state == InventoryUIState.MoveToForget)
-        {
-            Action<int> onMoveSelected = (int moveIndex) =>
-            {
-                StartCoroutine(OnMoveToForgetSelected(moveIndex));
-            };
-
-            moveSelectionUI.HandleMoveSelection(onMoveSelected);
-        }
+        base.HandleUpdate();
     }
 
-    IEnumerator ItemSelected()
+    public override void UpdateSelectionInUI()
     {
-        state = InventoryUIState.Busy;
+        base.UpdateSelectionInUI();
 
-        var item = inventory.GetItem(selectedItem, selectedCategory);
-
-        if (GameController.Instance.State == GameState.Shop)
-        {
-            onItemUsed?.Invoke(item);
-            state = InventoryUIState.ItemSelection;
-            yield break;
-        }
-
-        if (GameController.Instance.State == GameState.Battle)
-        {
-            // In Battle
-            if (!item.CanUseInBattle)
-            {
-                yield return DialogManager.Instance.ShowDialogText($"Este item não pode ser usado em batalha.");
-                state = InventoryUIState.ItemSelection;
-                yield break;
-            }
-        }
-        else
-        {
-            // Outside Battle
-            if (!item.CanUseOutsideBattle)
-            {
-                yield return DialogManager.Instance.ShowDialogText($"Este item não pode ser usado fora de batalha.");
-                state = InventoryUIState.ItemSelection;
-                yield break;
-            }
-        }
-
-        if (selectedCategory == (int)ItemCategory.Pokeballs)
-        {
-            StartCoroutine(UseItem());
-        }
-        else
-        {
-            OpenPartyScreen();
-
-            if (item is TMItem)
-                partyScreen.ShowIfTmIsUsable(item as TMItem);
-        }
-    }
-
-    IEnumerator UseItem()
-    {
-        state = InventoryUIState.Busy;
-
-        yield return HandleTmItems();
-
-        var item = inventory.GetItem(selectedItem, selectedCategory);
-        var pokemon = partyScreen.SelectedMember;
-
-        // Handle Evolution Items
-        if (item is EvolutionItem)
-        {
-            var evolution = pokemon.CheckForEvolution(item);
-            if (evolution != null)
-            {
-                yield return EvolutionManager.i.Evolve(pokemon, evolution);
-            }
-            else
-            {
-                yield return DialogManager.Instance.ShowDialogText($"Não teve nenhum efeito.");
-                ClosePartyScreen();
-                yield break;
-            }
-        }
-
-        var usedItem = inventory.UseItem(selectedItem, partyScreen.SelectedMember, selectedCategory);
-        if (usedItem != null)
-        {
-            if (usedItem is RecoveryItem)
-                yield return DialogManager.Instance.ShowDialogText($"O player usou {usedItem.Name}.");
-
-            onItemUsed?.Invoke(usedItem);
-        }
-        else
-        {
-            if (selectedCategory == (int)ItemCategory.Items)
-                yield return DialogManager.Instance.ShowDialogText($"Não teve nenhum efeito.");
-        }
-
-        ClosePartyScreen();
-    }
-
-    IEnumerator HandleTmItems()
-    {
-        var tmItem = inventory.GetItem(selectedItem, selectedCategory) as TMItem;
-        if (tmItem == null)
-            yield break;
-
-        var pokemon = partyScreen.SelectedMember;
-
-        if (pokemon.HasMove(tmItem.Move))
-        {
-            yield return DialogManager.Instance.ShowDialogText($"{pokemon.Base.Name} já aprendeu {tmItem.Move.Name}.");
-            yield break;
-        }
-
-        if (!tmItem.CanBeTaught(pokemon))
-        {
-            yield return DialogManager.Instance.ShowDialogText($"{pokemon.Base.Name} não pode aprender {tmItem.Move.Name}.");
-            yield break;
-        }
-
-        if (pokemon.Moves.Count < PokemonBase.MaxNumOfMoves)
-        {
-            pokemon.LearnMove(tmItem.Move);
-            yield return DialogManager.Instance.ShowDialogText($"{pokemon.Base.Name} aprendeu {tmItem.Move.Name}.");
-        }
-        else
-        {
-            yield return DialogManager.Instance.ShowDialogText($"{pokemon.Base.Name} está tentnado aprender {tmItem.Move.Name}.");
-            yield return DialogManager.Instance.ShowDialogText($"Mas não pode aprender mais de {PokemonBase.MaxNumOfMoves} habilidades.");
-            yield return ChooseMoveToForget(pokemon, tmItem.Move);
-            yield return new WaitUntil(() => state != InventoryUIState.MoveToForget);
-        }
-    }
-
-    IEnumerator ChooseMoveToForget(Pokemon pokemon, MoveBase newMove)
-    {
-        state = InventoryUIState.Busy;
-        yield return DialogManager.Instance.ShowDialogText($"Escolha uma habilidade que você quer esquecer.", true, false);
-        moveSelectionUI.gameObject.SetActive(true);
-        moveSelectionUI.SetMoveData(pokemon.Moves.Select(x => x.Base).ToList(), newMove);
-        moveToLearn = newMove;
-
-        state = InventoryUIState.MoveToForget;
-    }
-
-    void UpdateItemSelection()
-    {
         var slots = inventory.GetSlotsByCategory(selectedCategory);
-
-        selectedItem = Mathf.Clamp(selectedItem, 0, slots.Count - 1);
-
-        for (int i = 0; i < slotUIList.Count; ++i)
-        {
-            if (i == selectedItem)
-                slotUIList[i].NameText.color = GlobalSettings.i.HighlightedColor;
-            else
-                slotUIList[i].NameText.color = Color.black;
-        }        
-
         if (slots.Count > 0)
         {
             var item = slots[selectedItem].Item;
@@ -318,41 +123,7 @@ public class InventoryUI : MonoBehaviour
         itemDescription.text = "";
     }
 
-    void OpenPartyScreen()
-    {
-        state = InventoryUIState.PartySelection;
-        partyScreen.gameObject.SetActive(true);
-    }
+    public ItemBase SelectedItem => inventory.GetItem(selectedItem, selectedCategory);
 
-    void ClosePartyScreen()
-    {
-        state = InventoryUIState.ItemSelection;
-
-        partyScreen.ClearMemberSlotMessage();
-        partyScreen.gameObject.SetActive(false);
-    }
-
-    IEnumerator OnMoveToForgetSelected(int moveIndex)
-    {
-        var pokemon = partyScreen.SelectedMember;
-
-        DialogManager.Instance.CloseDialog();
-        moveSelectionUI.gameObject.SetActive(false);
-        if (moveIndex == PokemonBase.MaxNumOfMoves)
-        {
-            // Don't learn the new move
-            yield return DialogManager.Instance.ShowDialogText($"{pokemon.Base.Name} não aprendeu {moveToLearn.Name}.");
-        }
-        else
-        {
-            // Forget the selected move and learn new move
-            var selectedMove = pokemon.Moves[moveIndex].Base;
-            yield return DialogManager.Instance.ShowDialogText($"{pokemon.Base.Name} esqueceu {selectedMove.Name} e aprendeu {moveToLearn.Name}.");
-
-            pokemon.Moves[moveIndex] = new Move(moveToLearn);
-        }
-
-        moveToLearn = null;
-        state = InventoryUIState.ItemSelection;
-    }
+    public int SelectedCategory => selectedCategory;
 }
