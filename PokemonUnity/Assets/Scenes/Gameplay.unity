@@ -122,28 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &147946519 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 290752881181667498, guid: 898f471c02b6df64ba7dd284f2b13419, type: 3}
-  m_PrefabInstance: {fileID: 810571204}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &147946528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 147946519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c9f45d03717e8439db4067615ed347, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shopCameraOffset: {x: 3.5, y: 0}
-  inventoryUI: {fileID: 1603589888}
-  shopUI: {fileID: 810571207}
-  walletUI: {fileID: 1093155971}
-  countSelectorUI: {fileID: 810571206}
 --- !u!114 &399696572 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7120300390330326680, guid: b06ed3bcd4813ba46ace446e1447ae2d, type: 3}
@@ -3186,10 +3164,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 290752881181667498, guid: 898f471c02b6df64ba7dd284f2b13419, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 147946528}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 898f471c02b6df64ba7dd284f2b13419, type: 3}
 --- !u!114 &810571205 stripped
 MonoBehaviour:
@@ -3200,39 +3175,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46de0d960309fed43b5d5b11f2138346, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &810571206 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8145365195543079597, guid: 898f471c02b6df64ba7dd284f2b13419, type: 3}
-  m_PrefabInstance: {fileID: 810571204}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c9fae45f52ef624b99e74e9df2c8616, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &810571207 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 966993568777882226, guid: 898f471c02b6df64ba7dd284f2b13419, type: 3}
-  m_PrefabInstance: {fileID: 810571204}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc888bef63c58144296085c21dd0bfad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1093155971 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3276185687000413332, guid: 898f471c02b6df64ba7dd284f2b13419, type: 3}
-  m_PrefabInstance: {fileID: 810571204}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edb5933474612ab47a0714a12bdce5ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1143729794 stripped
@@ -3441,17 +3383,6 @@ MonoBehaviour:
   wildPokemonsInWater: []
   totalChance: 100
   totalChanceWater: -1
---- !u!114 &1603589888 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3126855476492073880, guid: 898f471c02b6df64ba7dd284f2b13419, type: 3}
-  m_PrefabInstance: {fileID: 810571204}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be8aee60b32ec944d857d0212c91e3db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2059080708
 PrefabInstance:
   m_ObjectHideFlags: 0
