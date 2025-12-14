@@ -1,20 +1,18 @@
+using GDEUtils.StateMachine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EvolutionManager : MonoBehaviour
+public class EvolutionState : State<GameController>
 {
     [SerializeField] GameObject evolutionUI;
     [SerializeField] Image pokemonImage;
 
     [SerializeField] AudioClip evolutionMusic;
 
-    public event Action OnStartEvolution;
-    public event Action OnCompleteEvolution;
-
-    public static EvolutionManager i { get; private set; }
+    public static EvolutionState i { get; private set; }
     private void Awake()
     {
         i = this;
@@ -22,7 +20,9 @@ public class EvolutionManager : MonoBehaviour
 
     public IEnumerator Evolve(Pokemon pokemon, Evolution evolution)
     {
-        OnStartEvolution?.Invoke();
+        var gc = GameController.Instance;
+        gc.StateMachine.Push(this);
+
         evolutionUI.gameObject.SetActive(true);
 
         AudioManager.i.PlayMusic(evolutionMusic);
@@ -37,6 +37,10 @@ public class EvolutionManager : MonoBehaviour
         yield return DialogManager.Instance.ShowDialogText($"{oldPokemon.Name} evoluiu para {pokemon.Base.Name}!");
 
         evolutionUI.gameObject.SetActive(false);
-        OnCompleteEvolution?.Invoke();
+
+        gc.PartyScreen.SetPartyData();
+        AudioManager.i.PlayMusic(gc.CurrentScene.SceneMusic, fade: true);
+
+        gc.StateMachine.Pop();
     }
 }

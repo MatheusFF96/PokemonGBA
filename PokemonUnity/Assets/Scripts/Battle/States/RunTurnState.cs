@@ -1,7 +1,10 @@
 using GDEUtils.StateMachine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class RunTurnState : State<BattleSystem>
 {
@@ -79,8 +82,15 @@ public class RunTurnState : State<BattleSystem>
             }
             else if (playerAction == BattleAction.UseItem)
             {
-                // This is handled from item screen, so do nothing and skip to enemy move
-                dialogBox.EnableActionSelector(false);
+                if (bs.SelectedItem is PokeballItem)
+                {
+                    yield return bs.ThrowPokeball(bs.SelectedItem as PokeballItem);
+                    if (bs.IsBattleOver) yield break;
+                }
+                else
+                {
+                    // This is handled from item screen, so do nothing and skip to enemy move
+                }
             }
             else if (playerAction == BattleAction.Run)
             {
@@ -272,11 +282,28 @@ public class RunTurnState : State<BattleSystem>
                     }
                     else
                     {
-                        //yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} está tentando aprender {newMove.Base.Name}.");
-                        //yield return dialogBox.TypeDialog($"Mas não pode aprender mais de {PokemonBase.MaxNumOfMoves} habilidades.");
-                        //yield return ChooseMoveToForget(playerUnit.Pokemon, newMove.Base);
-                        //yield return new WaitUntil(() => state != BattleStates.MoveToForget);
-                        //yield return new WaitForSeconds(2f);
+                        yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} está tentando aprender {newMove.Base.Name}.");
+                        yield return dialogBox.TypeDialog($"Mas não pode aprender mais de {PokemonBase.MaxNumOfMoves} habilidades.");
+                        yield return dialogBox.TypeDialog($"Escolha uma habilidade para esquecer.");
+
+                        MoveToForgetState.i.CurrentMoves = playerUnit.Pokemon.Moves.Select(x => x.Base).ToList();
+                        MoveToForgetState.i.NewMove = newMove.Base;
+                        yield return GameController.Instance.StateMachine.PushAndWait(MoveToForgetState.i);
+
+                        var moveIndex = MoveToForgetState.i.Selection;
+                        if (moveIndex == PokemonBase.MaxNumOfMoves || moveIndex == -1)
+                        {
+                            // Don't learn the new move
+                            yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} não aprendeu {newMove.Base.Name}.");
+                        }
+                        else
+                        {
+                            // Forget the selected move and learn new move
+                            var selectedMove = playerUnit.Pokemon.Moves[moveIndex].Base;
+                            yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} esqueceu {selectedMove.Name} e aprendeu {newMove.Base.Name}.");
+
+                            playerUnit.Pokemon.Moves[moveIndex] = new Move(newMove.Base);
+                        }
                     }
                 }
 

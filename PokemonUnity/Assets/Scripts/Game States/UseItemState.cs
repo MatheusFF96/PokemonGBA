@@ -10,6 +10,9 @@ public class UseItemState : State<GameController>
     [SerializeField] PartyScreen partyScreen;
     [SerializeField] InventoryUI inventoryUI;
 
+    // Output
+    public bool ItemUsed { get; private set; }
+
     public static UseItemState i { get; private set; }
     Inventory inventory;
     private void Awake()
@@ -22,6 +25,8 @@ public class UseItemState : State<GameController>
     public override void Enter(GameController owner)
     {
         gc = owner;
+
+        ItemUsed = false;
 
         StartCoroutine(UseItem());
     }
@@ -43,7 +48,7 @@ public class UseItemState : State<GameController>
                 var evolution = pokemon.CheckForEvolution(item);
                 if (evolution != null)
                 {
-                    yield return EvolutionManager.i.Evolve(pokemon, evolution);
+                    yield return EvolutionState.i.Evolve(pokemon, evolution);
                 }
                 else
                 {
@@ -56,6 +61,8 @@ public class UseItemState : State<GameController>
             var usedItem = inventory.UseItem(item, partyScreen.SelectedMember);
             if (usedItem != null)
             {
+                ItemUsed = true;
+
                 if (usedItem is RecoveryItem)
                     yield return DialogManager.Instance.ShowDialogText($"O player usou {usedItem.Name}.");
             }
@@ -101,11 +108,11 @@ public class UseItemState : State<GameController>
 
             yield return DialogManager.Instance.ShowDialogText($"Escolha uma habilidade que você quer esquecer.", true, false);
 
+            MoveToForgetState.i.CurrentMoves = pokemon.Moves.Select(x => x.Base).ToList();
             MoveToForgetState.i.NewMove = tmItem.Move;
-            MoveToForgetState.i.CurrentMoves = pokemon.Moves.Select(m => m.Base).ToList();
             yield return gc.StateMachine.PushAndWait(MoveToForgetState.i);
 
-            int moveIndex = MoveToForgetState.i.Selection;
+            var moveIndex = MoveToForgetState.i.Selection;
             if (moveIndex == PokemonBase.MaxNumOfMoves || moveIndex == -1)
             {
                 // Don't learn the new move

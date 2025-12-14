@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4359397196137950727}
   - component: {fileID: 8599209955852482492}
   - component: {fileID: 1255174813758548049}
-  - component: {fileID: 3074950795098555956}
   - component: {fileID: 4116347890152198978}
   - component: {fileID: 4322232700278709843}
   - component: {fileID: 2326939822342672981}
@@ -24,6 +23,7 @@ GameObject:
   - component: {fileID: 7282124512859881528}
   - component: {fileID: 7949828145937724674}
   - component: {fileID: 5415682747449451689}
+  - component: {fileID: 1006709494481415180}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -143,21 +143,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightedColor: {r: 0.2236, g: 0.40391332, b: 0.86, a: 1}
---- !u!114 &3074950795098555956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 290752881181667498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a320341c276423547a361e9b38c1f3e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  evolutionUI: {fileID: 8084874553288861089}
-  pokemonImage: {fileID: 3397506202353555963}
-  evolutionMusic: {fileID: 8300000, guid: 2a36e57d860ef6c4dab4e26ef35f4663, type: 3}
 --- !u!114 &4116347890152198978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,6 +258,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a61b0f2751312ab41981cc5cfb1d5deb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1006709494481415180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290752881181667498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd8aef60b950b14b80c1736451aacb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evolutionUI: {fileID: 8084874553288861089}
+  pokemonImage: {fileID: 3397506202353555963}
+  evolutionMusic: {fileID: 8300000, guid: 2a36e57d860ef6c4dab4e26ef35f4663, type: 3}
 --- !u!1 &304376147827431019
 GameObject:
   m_ObjectHideFlags: 0
